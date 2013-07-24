@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webnark - zeroXten - v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .score {
+        text-align: center;
+        font-size: 3em;
+       }
+
+      .good {
+        color: green;
+      }
+
+      .bad {
+        color: red;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Webnark</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row"> <!-- container row -->
+
+        <div class="span9"> <!-- Main content -->
+
+         <!-- Search bar -->
+         <div class="input-append">
+          <input class="span8" id="appendedInputButton" type="text" placeholder="domain.com">
+          <button class="btn" type="button">Search</button>
+         </div>
+
+         <!-- Site report -->
+         <h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
+         <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
+         <br/>
+
+         <div class="row"> <!-- report row -->
+
+         <div class="span6">
+           <table class="table">
+             <tr class="error">
+               <td><i class="icon-remove"></i></td>
+               <td>Extensive user tracking</td>
+               <td>-10</td>
+             </tr>
+             <tr class="error">
+               <td><i class="icon-remove"></i></td>
+               <td>Questionable privacy policy</td>
+               <td>-10</td>
+             </tr>
+             <tr class="warning">
+               <td><i class="icon-minus"></i></td>
+               <td>Uses advertising networks</td>
+               <td>-5</td>
+             </tr>
+             <tr class="success">
+               <td><i class="icon-ok"></i></td>
+               <td>Published disclosure policy</td>
+               <td>+5</td>
+             </tr>
+             <tr class="success">
+               <td><i class="icon-ok"></i></td>
+               <td>Bug bounty programme</td>
+               <td>+10</td>
+             </tr>
+             <tr class="success">
+               <td><i class="icon-ok"></i></td>
+               <td>Keeps your details safe</td>
+               <td>+10</td>
+             </tr>
+             <tr class="success">
+               <td><i class="icon-ok"></i></td>
+               <td>Good security practises</td>
+               <td>+20</td>
+             </tr>
+           </table>           
+           <p class="pull-right">view full report</p>
+         </div> <!-- span6 -->
+
+         <!-- Score and description -->
+         <div class="span3">
+           <p class="score good">9/10</p>
+           <br/>
+           <p style="text-align: center"> <!-- TODO bad style specifying `style` - does bootstrap provide a CSS class for this or should we make our own? -->
+             <img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
+           </p>
+           <br/>
+           <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
+           <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
+         </div>
+  
+         </div> <!-- report row -->
+
+         <hr>
+
+         <h3>Comments</h3>
+
+         <p>laksdjf asldkfjasdf l;kasjdfal;skdfj asdlfk asdlkfj asdlkfjkdskdkjksd fasdklfjasdlkf asdfl;kasd asdlkfasdjfklfsdkldklfdjlksadfjklasdf kajsd falskdfj <span class="muted"> - zeroXten at 14:22</span></p>
+         <p>laksdjf asldkfjasdf l;kasjdfal;skdfj asdlfk asdlkfj asdlkfjkdskdkjksd fasdklfjasdlkf asdfl;kasd asdlkfasdjfklfsdkldklfdjlksadfjklasdf kajsd falskdfj <span class="muted"> - zeroXten at 14:22</span></p>
+         <p>laksdjf asldkfjasdf l;kasjdfal;skdfj asdlfk asdlkfj asdlkfjkdskdkjksd fasdklfjasdlkf asdfl;kasd asdlkfasdjfklfsdkldklfdjlksadfjklasdf kajsd falskdfj <span class="muted"> - zeroXten at 14:22</span></p>
+
+        </div> <!-- main content -->
+
+        <div class="span3"> <!-- right side bar -->
+
+          <div class="well">
+            <h3>Hall of Fame</h3>
+            <ul>
+              <li>google.com - 9/10</li>
+              <li>yahoo.com - 8/10</li>
+              <li>github.com - 8/10</li>
+              <li>twitter.com - 7/10</li>
+            </ul>
+          </div>
+
+          <div class="well">
+            <h3>Hall of Shame</h3>
+            <ul>
+              <li>microsoft.com - 3/10</li>
+              <li>facebook.com - 4/10</li>
+              <li>mysql.com - 4/10</li>
+              <li>ubuntu.com - 5/10</li>
+            </ul>
+          </div>
+
+          <div class="well">
+            <h3>Recent Sites</h3>
+            <ul>
+              <li>microsoft.com - 3/10</li>
+              <li>facebook.com - 4/10</li>
+              <li>mysql.com - 4/10</li>
+              <li>ubuntu.com - 5/10</li>
+            </ul>
+          </div>
+
+          <div class="well">
+            <h3>Recent Trends</h3>
+            <ul>
+              <li>Global index: 145 (+10)</li>
+              <li>Global average: 6/10</li>
+            </ul>
+          </div>
+        </div> <!-- right side bar -->
+
+      </div> <!-- container row -->
+
+      <hr>
+      <div class="footer">
+        <p>About | Privacy | Contact | Creative Commons blah</p>
+      </div>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
