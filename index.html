@@ -40,6 +40,10 @@
         margin-bottom: 5px;
       }
 
+      .warn {
+        color: orange;
+      }
+
       .bad {
         color: red;
       }
@@ -92,10 +96,24 @@
           <button class="btn" type="button">Search</button>
          </div>
 
-         <!-- Site report -->
-         <h2>Security report for DropBox</h2>
-         <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
-         <br/>
+         <div class="row">
+
+           <div class="span6">
+           <!-- Site report -->
+           <h2>Security report for DropBox</h2>
+           <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
+           </div>
+
+           <!-- Score -->
+           <div class="span3">
+             <p class="score warn">7/10</p>
+             <br/>
+             <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
+             <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
+           </div>
+         
+         </div> <!-- report row -->
+           <br/>
 
            <div class="bad-block">Authentication &amp; Session Management</div>
            <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
@@ -106,7 +124,7 @@
              <li class="good">Cookies only over SSL</li>
            </ul>
 
-           <div class="bad-block">Privacyi &amp; EULA</div>
+           <div class="bad-block">Privacy &amp; EULA</div>
            <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
              <li class="bad">May provide your details to third parties</li>
