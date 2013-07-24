@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webnark - zeroXten - v1</title>
+    <title>Webnark - zeroXten - full report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -24,9 +24,36 @@
         color: green;
       }
 
+      .good-block {
+        background-color: #E6F8E0;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      li.good {
+        list-style-image:url('/img/tick_circle.png');
+      }
+
+      .warn-block {
+        background-color: #F7F8E0;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
       .bad {
         color: red;
       }
+
+      .bad-block {
+        background-color: #F8E0E0;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      li.bad {
+        list-style-image:url('/img/badge_circle_cross.png');
+      }
+
     </style>
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -66,62 +93,68 @@
          </div>
 
          <!-- Site report -->
-         <h2>Security report for google.com</h2>
+         <h2>Security report for DropBox</h2>
          <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
          <br/>
 
-         <div class="row"> <!-- report row -->
+           <div class="bad-block">Authentication &amp; Session Management</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">No two-factor support</li>
+             <li class="bad">No federated authentication (e.g. OpenID)</li>
+             <li class="bad">Question/Answer used for password reset</li>
+             <li class="good">Cookies only over SSL</li>
+           </ul>
 
-         <div class="span6">
-           <table class="table">
-             <tr class="error">
-               <td><i class="icon-remove"></i></td>
-               <td>Extensive user tracking</td>
-               <td>-10</td>
-             </tr>
-             <tr class="error">
-               <td><i class="icon-remove"></i></td>
-               <td>Questionable privacy policy</td>
-               <td>-10</td>
-             </tr>
-             <tr class="warning">
-               <td><i class="icon-minus"></i></td>
-               <td>Uses advertising networks</td>
-               <td>-5</td>
-             </tr>
-             <tr class="success">
-               <td><i class="icon-ok"></i></td>
-               <td>Published disclosure policy</td>
-               <td>+5</td>
-             </tr>
-             <tr class="success">
-               <td><i class="icon-ok"></i></td>
-               <td>Bug bounty programme</td>
-               <td>+10</td>
-             </tr>
-             <tr class="success">
-               <td><i class="icon-ok"></i></td>
-               <td>Keeps your details safe</td>
-               <td>+10</td>
-             </tr>
-             <tr class="success">
-               <td><i class="icon-ok"></i></td>
-               <td>Good security practises</td>
-               <td>+20</td>
-             </tr>
-           </table>           
-           <p class="pull-right">view full report</p>
-         </div> <!-- span6 -->
+           <div class="bad-block">Privacyi &amp; EULA</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">May provide your details to third parties</li>
+             <li class="bad">May use your details for marketing purposes</li>
+             <li class="good">Non-restrictive EULA</li>
+           </ul>
+           <p>Privacy policy | End User Licence Agreement</p>
 
-         <!-- Score -->
-         <div class="span3">
-           <p class="score good">9/10</p>
+           <div class="bad-block">Data at rest</div>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">Provides only minimal details on cryptography and security implementations</li>
+             <li class="bad">Can decrypt user data</li>
+             <li class="good">Uses bcrypt for storing passwords</li>
+           </ul>
+           <p>Technical specifications</p>
+
+           <div class="warn-block">Data in transit</div>
+           <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+           <ul>
+             <li class="bad">Defaults to weak SSL implemenation</li>
+             <li class="good">SSL used on whole site</li>
+           </ul>
+
+           <div class="good-block">Disclosure</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+           <ul>
+             <li class="bad">No bug bounty programme</li>
+             <li class="good">Appropriate disclosure policy</li>
+           </ul>
+           <p>Bug bounty programme | Disclosure policy</p>
+
+           <div class="good-block">Advertising</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="good">No advertising</li>
+           </ul>
+
+           <div class="good-block">History</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="good">No known security incidents</li>
+           </ul>
+
+           <p class="pull-right">view summary report</p>
            <br/>
-           <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
-           <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
-         </div>
-  
-         </div> <!-- report row -->
 
          <hr>
 

@@ -1,0 +1,50 @@
+Basics 
+(maybe reorder these? name and service type, url, screenshot and description) - its just a rough list for now
+* service types (website, web service, api, mobile app, desktop app)
+* domain/url
+* name
+* description
+* screenshot (how do we make those? use some free service? or install an open-source screenshot generator on our server? phantomjs? https://github.com/ariya/phantomjs/wiki/Screen-Capture on an isolated user?)
+
+Hosting
+
+* Provider
+* Country
+
+Privacy
+
+* cookies
+* tracking cookies
+* provides user info to third parties
+* summary
+
+Authentication
+
+* auth methods (user/pass, openid, two factor, ssl client cert, ...)
+* reset method (email you your password, link, stupid questions...)
+* method used for sessions (cookie/auth token in URL/...)
+
+Data in transit (better name needed)
+
+* ssl (none, login only etc)
+
+Data at rest (better name need or reorg)
+
+* cryptography used (...)
+
+Disclosure
+
+* bug bounty programme available?
+* disclosure policy
+
+Advertising
+
+* Has advertising
+* Uses advertising networks
+
+History
+
+* malware
+* Previous pwnage
+* Previous data loss
+
