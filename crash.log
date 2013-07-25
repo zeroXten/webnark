@@ -1,0 +1,209 @@
+Crashlog created at 2013-07-25 10:54:27 +0100
+
+===== MESSAGE:
+
+Errno::ENOENT: No such file or directory - output/img/
+
+===== COMPILATION STACK:
+
+  - [item]   /img/badge_circle_cross/ (rep default)
+
+===== STACK TRACE:
+
+  0. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1371:in `initialize'
+  1. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1371:in `open'
+  2. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1371:in `block in copy_file'
+  3. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1370:in `open'
+  4. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1370:in `copy_file'
+  5. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:477:in `copy_file'
+  6. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:396:in `block in cp'
+  7. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1515:in `block in fu_each_src_dest'
+  8. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1531:in `fu_each_src_dest0'
+  9. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:1513:in `fu_each_src_dest'
+  10. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/fileutils.rb:395:in `cp'
+  11. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/result_data/item_rep.rb:146:in `write'
+  12. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/result_data/item_rep.rb:432:in `snapshot'
+  13. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:386:in `compile_rep'
+  14. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:340:in `block in compile_reps'
+  15. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `loop'
+  16. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `compile_reps'
+  17. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  18. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:58:in `compile'
+  19. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:363:in `block in run'
+  20. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:404:in `run_listeners_while'
+  21. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:362:in `run'
+  22. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  23. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  24. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  25. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
+  26. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  27. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  28. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  29. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  30. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/cri-2.3.0/lib/cri/command.rb:262:in `run'
+  31. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `block in run'
+  32. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  33. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  34. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
+  35. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/bin/nanoc:19:in `<top (required)>'
+  36. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/bin/nanoc:19:in `load'
+  37. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/bin/nanoc:19:in `<main>'
+  38. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/bin/ruby_noexec_wrapper:14:in `eval'
+  ... 41 more lines omitted. See full crash log for details.
+
+===== VERSION INFORMATION:
+
+nanoc 3.6.4 © 2007-2013 Denis Defreyne.
+Running ruby 1.9.3 (2013-05-15) on x86_64-darwin12.3.0 with RubyGems 1.8.25.
+
+===== SYSTEM INFORMATION:
+
+Darwin ukm043583 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+
+===== INSTALLED GEMS:
+
+  activesupport 3.2.13
+  adsf 1.1.1
+  akami 1.2.0
+  amalgalite 0.15.0
+  archive-tar-minitar 0.5.2
+  arrayfields 4.7.4
+  bigdecimal 1.1.0
+  builder 3.2.2
+  bundler 1.3.5
+  bundler-unload 1.0.1
+  chef 11.4.4
+  classifier 1.3.3
+  colorator 0.1
+  colored 1.2
+  commander 4.1.3
+  configuration 0.0.5
+  crate 0.2.1
+  cri 2.3.0
+  directory_watcher 1.4.1
+  erubis 2.7.0
+  excon 0.23.0
+  fast-stemmer 1.0.2
+  fastercsv 1.5.5
+  flexmock 1.3.2
+  fog 1.12.1
+  foodcritic 2.1.0
+  formatador 0.2.4
+  gherkin 2.11.8
+  gyoku 1.0.0
+  highline 1.6.19
+  httpi 2.0.2
+  i18n 0.6.1
+  io-console 0.3
+  ipaddress 0.8.0
+  jekyll 1.0.3
+  jsmin 1.0.1
+  json 1.5.5
+  kramdown 1.0.2
+  linguistics 2.0.2
+  liquid 2.5.0
+  lockfile 2.1.0
+  loggability 0.6.1
+  logging 0.9.8
+  maruku 0.6.1
+  mime-types 1.23
+  mini_portile 0.5.0
+  minitest 2.5.1
+  mixlib-authentication 1.3.0
+  mixlib-cli 1.3.0
+  mixlib-config 1.1.2
+  mixlib-log 1.6.0
+  mixlib-shellout 1.1.0
+  multi_json 1.7.7
+  nanoc 3.6.4
+  nanoc-cachebuster 0.3.1
+  nanoc-toolbox 0.1.3
+  net-scp 1.1.1
+  net-ssh 2.6.7
+  net-ssh-gateway 1.2.0
+  net-ssh-multi 1.1
+  nokogiri 1.5.10, 1.6.0
+  nori 2.1.0
+  ohai 6.16.0
+  polyglot 0.3.3
+  posix-spawn 0.3.6
+  pygments.rb 0.5.1
+  rack 1.5.2
+  rack-test 0.6.2
+  rainpress 1.0
+  rak 1.4
+  rake 0.8.7, 0.9.2.2, 10.0.4
+  rdoc 3.9.5
+  redcarpet 2.3.0
+  rest-client 1.6.7
+  ruby-hmac 0.4.0
+  rubygems-bundler 1.2.0
+  rvm 1.11.3.8
+  safe_yaml 0.7.1
+  savon 2.2.0
+  serve 1.5.2
+  slop 3.4.5
+  syntax 1.0.0
+  systemu 2.5.2
+  terminal-notifier 1.4.2
+  tilt 1.3.7
+  treetop 1.4.14
+  tzinfo 1.0.0
+  wasabi 3.1.0
+  yajl-ruby 1.1.0
+
+===== ENVIRONMENT:
+
+Apple_PubSub_Socket_Render => "/tmp/launch-EeaOpV/Render"
+Apple_Ubiquity_Message => "/tmp/launch-2IVnh8/Apple_Ubiquity_Message"
+COMMAND_MODE => "unix2003"
+DISPLAY => "/tmp/launch-9tWhnI/org.macosforge.xquartz:0"
+EDITOR => "vim"
+GEM_HOME => "/Users/fscott/.rvm/gems/ruby-1.9.3-p429"
+GEM_PATH => "/Users/fscott/.rvm/gems/ruby-1.9.3-p429:/Users/fscott/.rvm/gems/ruby-1.9.3-p429@global"
+HOME => "/Users/fscott"
+IRBRC => "/Users/fscott/.rvm/rubies/ruby-1.9.3-p429/.irbrc"
+ITERM_PROFILE => "Default"
+ITERM_SESSION_ID => "w2t0p0"
+LANG => "en_GB.UTF-8"
+LOGNAME => "fscott"
+MY_RUBY_HOME => "/Users/fscott/.rvm/rubies/ruby-1.9.3-p429"
+OLDPWD => "/Users/fscott/Personal/projects/webnark/nanoc/webnark/output"
+PATH => "/Users/fscott/.rvm/gems/ruby-1.9.3-p429/bin:/Users/fscott/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/fscott/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/fscott/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/fscott/.rvm/bin"
+PWD => "/Users/fscott/Personal/projects/webnark/nanoc/webnark"
+RUBY_VERSION => "ruby-1.9.3-p429"
+SHELL => "/bin/bash"
+SHLVL => "2"
+SSH_AUTH_SOCK => "/tmp/launch-V8nfSL/Listeners"
+STY => "1756.ttys001.ukm043583"
+TERM => "screen"
+TERMCAP => "SC|screen|VT 100/ANSI X3.64 virtual terminal:\\\n\t:DO=\\E[%dB:LE=\\E[%dD:RI=\\E[%dC:UP=\\E[%dA:bs:bt=\\E[Z:\\\n\t:cd=\\E[J:ce=\\E[K:cl=\\E[H\\E[J:cm=\\E[%i%d;%dH:ct=\\E[3g:\\\n\t:do=^J:nd=\\E[C:pt:rc=\\E8:rs=\\Ec:sc=\\E7:st=\\EH:up=\\EM:\\\n\t:le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E)0:\\\n\t:li#62:co#118:am:xn:xv:LP:sr=\\EM:al=\\E[L:AL=\\E[%dL:\\\n\t:cs=\\E[%i%d;%dr:dl=\\E[M:DL=\\E[%dM:dc=\\E[P:DC=\\E[%dP:\\\n\t:im=\\E[4h:ei=\\E[4l:mi:IC=\\E[%d@:ks=\\E[?1h\\E=:\\\n\t:ke=\\E[?1l\\E>:vi=\\E[?25l:ve=\\E[34h\\E[?25h:vs=\\E[34l:\\\n\t:ti=\\E[?1049h:te=\\E[?1049l:us=\\E[4m:ue=\\E[24m:so=\\E[3m:\\\n\t:se=\\E[23m:mb=\\E[5m:md=\\E[1m:mr=\\E[7m:me=\\E[m:ms:\\\n\t:Co#8:pa#64:AF=\\E[3%dm:AB=\\E[4%dm:op=\\E[39;49m:AX:\\\n\t:vb=\\Eg:G0:as=\\E(0:ae=\\E(B:\\\n\t:ac=\\140\\140aaffggjjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~..--++,,hhII00:\\\n\t:po=\\E[5i:pf=\\E[4i:k0=\\E[10~:k1=\\EOP:k2=\\EOQ:k3=\\EOR:\\\n\t:k4=\\EOS:k5=\\E[15~:k6=\\E[17~:k7=\\E[18~:k8=\\E[19~:\\\n\t:k9=\\E[20~:k;=\\E[21~:F1=\\E[23~:F2=\\E[24~:F3=\\E[1;2P:\\\n\t:F4=\\E[1;2Q:F5=\\E[1;2R:F6=\\E[1;2S:F7=\\E[15;2~:\\\n\t:F8=\\E[17;2~:F9=\\E[18;2~:FA=\\E[19;2~:kb=^H:K2=\\EOE:\\\n\t:kB=\\E[Z:kF=\\E[1;2B:kR=\\E[1;2A:*4=\\E[3;2~:*7=\\E[1;2F:\\\n\t:#2=\\E[1;2H:#3=\\E[2;2~:#4=\\E[1;2D:%c=\\E[6;2~:%e=\\E[5;2~:\\\n\t:%i=\\E[1;2C:kh=\\E[1~:@1=\\E[1~:kH=\\E[4~:@7=\\E[4~:\\\n\t:kN=\\E[6~:kP=\\E[5~:kI=\\E[2~:kD=\\E[3~:ku=\\EOA:kd=\\EOB:\\\n\t:kr=\\EOC:kl=\\EOD:km:"
+TERM_PROGRAM => "iTerm.app"
+TMPDIR => "/var/folders/n1/4ss_2rt10396zylvvdsjqv5cm4l758/T/"
+USER => "fscott"
+WINDOW => "1"
+_ => "/Users/fscott/.rvm/gems/ruby-1.9.3-p429/bin/nanoc"
+_ORIGINAL_GEM_PATH => "/Users/fscott/.rvm/gems/ruby-1.9.3-p429:/Users/fscott/.rvm/gems/ruby-1.9.3-p429@global"
+__CF_USER_TEXT_ENCODING => "0x28499CA8:0:0"
+rvm_bin_path => "/Users/fscott/.rvm/bin"
+rvm_path => "/Users/fscott/.rvm"
+rvm_prefix => "/Users/fscott"
+rvm_version => "1.20.13 (stable)"
+
+===== LOAD PATHS:
+
+  0. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib
+  1. /Users/fscott/.rvm/gems/ruby-1.9.3-p429@global/gems/bundler-unload-1.0.1/lib
+  2. /Users/fscott/.rvm/gems/ruby-1.9.3-p429@global/gems/rubygems-bundler-1.2.0/lib
+  3. /Users/fscott/.rvm/gems/ruby-1.9.3-p429@global/gems/bundler-1.3.5/lib
+  4. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/colored-1.2/lib
+  5. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/cri-2.3.0/lib
+  6. /Users/fscott/.rvm/gems/ruby-1.9.3-p429/gems/nanoc-3.6.4/lib
+  7. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/site_ruby/1.9.1
+  8. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/site_ruby/1.9.1/x86_64-darwin12.3.0
+  9. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/site_ruby
+  10. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/vendor_ruby/1.9.1
+  11. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/vendor_ruby/1.9.1/x86_64-darwin12.3.0
+  12. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/vendor_ruby
+  13. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1
+  14. /Users/fscott/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/x86_64-darwin12.3.0

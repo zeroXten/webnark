@@ -2,64 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webnark - zeroXten - full report</title>
+    <title>Webnark - zeroXten - v1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
-
-      .score {
-        text-align: center;
-        font-size: 3em;
-       }
-
-      .good {
-        color: green;
-      }
-
-      .good-block {
-        background-color: #E6F8E0;
-        padding: 10px;
-        margin-bottom: 5px;
-      }
-
-      li.good {
-        list-style-image:url('/img/tick_circle.png');
-      }
-
-      .warn-block {
-        background-color: #F7F8E0;
-        padding: 10px;
-        margin-bottom: 5px;
-      }
-
-      .warn {
-        color: orange;
-      }
-
-      .bad {
-        color: red;
-      }
-
-      .bad-block {
-        background-color: #F8E0E0;
-        padding: 10px;
-        margin-bottom: 5px;
-      }
-
-      li.bad {
-        list-style-image:url('/img/badge_circle_cross.png');
-      }
-
-    </style>
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/webnark.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -96,25 +47,67 @@
           <button class="btn" type="button">Search</button>
          </div>
 
-         <div class="row">
+        <h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
+<p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
-           <div class="span6">
-           <!-- Site report -->
-           <h2>Security report for DropBox</h2>
-           <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
-           </div>
+<div class="row">
+<div class="span6">
+<table class="table">
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Authentication &amp; Session Management</td>
+<td>-20</td>
+</tr>
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Privacy &amp; EULA</td>
+<td>-10</td>
+</tr>
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Data at rest</td>
+<td>-10</td>
+</tr>
+<tr class="warning">
+<td><i class="icon-minus"></i></td>
+<td>Data in transit</td>
+<td>-5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>Disclosure</td>
+<td>+5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>Advertising</td>
+<td>+5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>History</td>
+<td>+10</td>
+</tr>
+</table>           
 
-           <!-- Score -->
-           <div class="span3">
-             <p class="score warn">7/10</p>
-             <br/>
-             <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
-             <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
-           </div>
-         
-         </div> <!-- report row -->
+<br/>
+<p>In hac habitasse platea dictumst. Aenean vitae dignissim dui. Maecenas eget lorem varius, tincidunt nulla et, dapibus sapien. Cras aliquet tortor vel nulla luctus sodales. Aliquam quis urna neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra quam vitae libero vestibulum tristique. Sed ligula ante, aliquam sit amet tortor quis, sagittis scelerisque nisl.</p>
+<br/>
+</div>
 
-           <br/>
+<div class="span3">
+<span class="text-center">
+<div class="good-block good score">9/10</div>
+<br/>
+<img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
+<br/>
+<p>Hosted in <img alt="us" src="/img/flags/united_states_flag.png" width="16" height="16"> by Dropbox, Inc.</p>
+</span>
+
+</div>
+
+</div>
+
 
            <div class="bad-block">Authentication &amp; Session Management</div>
            <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
@@ -122,7 +115,7 @@
              <li class="bad">No two-factor support</li>
              <li class="bad">No federated authentication (e.g. OpenID)</li>
              <li class="bad">Question/Answer used for password reset</li>
-             <li class="good">Cookies only over SSL</li>
+             <li class="good">Cookies only over TLS</li>
            </ul>
 
            <div class="bad-block">Privacy &amp; EULA</div>
@@ -147,8 +140,8 @@
            <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">Defaults to weak SSL implemenation</li>
-             <li class="good">SSL used on whole site</li>
+             <li class="bad">Defaults to weak TLS implemenation</li>
+             <li class="good">TLS  used on whole site</li>
            </ul>
 
            <div class="good-block">Disclosure</div>
@@ -173,58 +166,42 @@
            </ul>
 
            <p class="pull-right">view summary report</p>
-           <br/>
 
-         <hr>
-
-         <h3>Comments</h3>
-
-         <p>laksdjf asldkfjasdf l;kasjdfal;skdfj asdlfk asdlkfj asdlkfjkdskdkjksd fasdklfjasdlkf asdfl;kasd asdlkfasdjfklfsdkldklfdjlksadfjklasdf kajsd falskdfj <span class="muted"> - zeroXten at 14:22</span></p>
-         <p>laksdjf asldkfjasdf l;kasjdfal;skdfj asdlfk asdlkfj asdlkfjkdskdkjksd fasdklfjasdlkf asdfl;kasd asdlkfasdjfklfsdkldklfdjlksadfjklasdf kajsd falskdfj <span class="muted"> - zeroXten at 14:22</span></p>
-         <p>laksdjf asldkfjasdf l;kasjdfal;skdfj asdlfk asdlkfj asdlkfjkdskdkjksd fasdklfjasdlkf asdfl;kasd asdlkfasdjfklfsdkldklfdjlksadfjklasdf kajsd falskdfj <span class="muted"> - zeroXten at 14:22</span></p>
 
         </div> <!-- main content -->
 
         <div class="span3"> <!-- right side bar -->
 
-          <div class="well">
-            <h3>Hall of Fame</h3>
+          <div class="title-block"><b>Hall of Fame</b></div>
             <ul>
               <li>google.com - 9/10</li>
               <li>yahoo.com - 8/10</li>
               <li>github.com - 8/10</li>
               <li>twitter.com - 7/10</li>
             </ul>
-          </div>
 
-          <div class="well">
-            <h3>Hall of Shame</h3>
+          <div class="title-block"><b>Hall of Shame</b></div>
             <ul>
               <li>microsoft.com - 3/10</li>
               <li>facebook.com - 4/10</li>
               <li>mysql.com - 4/10</li>
               <li>ubuntu.com - 5/10</li>
             </ul>
-          </div>
 
-          <div class="well">
-            <h3>Recent Sites</h3>
+          <div class="title-block"><b>Recent sites</b></div>
             <ul>
               <li>microsoft.com - 3/10</li>
               <li>facebook.com - 4/10</li>
               <li>mysql.com - 4/10</li>
               <li>ubuntu.com - 5/10</li>
             </ul>
-          </div>
 
-          <div class="well">
-            <h3>Recent Trends</h3>
+	  <div class="title-block"><b>Trends</b></div>
             <ul>
               <li>Global index: 145 (+10)</li>
               <li>Global average: 6/10</li>
             </ul>
           </div>
-        </div> <!-- right side bar -->
 
       </div> <!-- container row -->
 
