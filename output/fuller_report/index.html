@@ -50,7 +50,7 @@
           <button class="btn" type="button">Search</button>
          </div>
 
-        <h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
+        <h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
 <div class="row">
@@ -94,13 +94,13 @@
 </table>           
 
 <br/>
-<p>In hac habitasse platea dictumst. Aenean vitae dignissim dui. Maecenas eget lorem varius, tincidunt nulla et, dapibus sapien. Cras aliquet tortor vel nulla luctus sodales. Aliquam quis urna neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra quam vitae libero vestibulum tristique. Sed ligula ante, aliquam sit amet tortor quis, sagittis scelerisque nisl.</p>
+<p>DropBox is a cloud data backup and sync service.</p>
 <br/>
 </div>
 
 <div class="span3">
 <span class="text-center">
-<div class="good-block good score">9/10</div>
+<div class="good-block good score">7/10</div>
 <br/>
 <img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
 <br/>
@@ -112,18 +112,25 @@
 </div>
 
 
-           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
-           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <div class="bad-block">Data at Rest <span class="pull-right"><b>-20 points</b></span></div>
+           <p>Refers to inactive data which is stored physically in any digital form (e.g. harddisk, USB drive, CDs and DVDs etc.) [1].
            <hr>
-           <p class="bad">Provides only minimal details on cryptography and security implementations (-20)</p>
-           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-<hr>
-             <p class="bad">Can decrypt user data (-15)</p>
-           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-<hr>
-             <p class="good">Uses bcrypt for storing passwords (+15)</p>
-           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-<hr>
+
+           <p class="bad">Provides only minimal details on cryptography and security implementations <span class="pull-right"><b>-20</b></span></p>
+           <p>Good security is based on correct implementation of well established and tested security principals. It does not rely on the secrecy of technologies and designs used. By publishing an overview of its security architecture, a company offers its users transparency and allows the security industry to objectively review the safety of the service. Not publishing details forces users to make an ill-informed choice, potentially putting them at risk.</p>
+           <blockquote>Website only contains a paragraph along the lines of "we use bank-grade security"</blockquote>
+           <hr>
+
+           <p class="bad">No zero-knowledge policy <span class="pull-right"><b>-15</b></span></p>
+           <p>This service stores user data in an encrypted form but has access to the master key which allows them to decrypt the data. This potentially exposes the user's data to rogue employees, government requests (including foreign governments if the data is hosted outside your country), and criminals in the event of a successful security breach.</p>
+            <blockquote>Data is encrypted using 256 bit AES but they have access to master key to allow support to troubleshoot issues.</blockquote>
+            <hr>
+
+           <p class="good">Secure password storage <span class="pull-right"><b>+15</b></span></p>
+           <p>This service uses a strong and well established method of securely storing passwords.</p>
+           <blockquote>This service uses bcrypt</blockquote>
+           <hr>
+
            <p><a href="#">Technical specifications</a></p>
 
            <div class="bad-block">Authentication &amp; Session Management (-10)</div>
