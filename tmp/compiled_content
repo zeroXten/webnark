@@ -1,4 +1,4 @@
-{:	data{I"/css/bootstrap-responsive/:ET{:default{:	lastI"_V/*!
+{:	data{I"/css/bootstrap-responsive/:ET{:default{:	lastI"_V/*!
  * Bootstrap Responsive v2.3.2
  *
  * Copyright 2012 Twitter, Inc
@@ -7425,7 +7425,7 @@ button.close {
   }
 }
 ;T;	@;
-@I"/full_report/;T{;{	;I"Õ$<!DOCTYPE html>
+@I"/full_report/;T{;{	;I"Y/<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7438,6 +7438,9 @@ button.close {
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="/css/webnark.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -7482,17 +7485,17 @@ button.close {
 <table class="table">
 <tr class="error">
 <td><i class="icon-remove"></i></td>
-<td>Authentication &amp; Session Management</td>
+<td>Data at rest</td>
 <td>-20</td>
 </tr>
 <tr class="error">
 <td><i class="icon-remove"></i></td>
-<td>Privacy &amp; EULA</td>
+<td>Authentication &amp; Session Management</td>
 <td>-10</td>
 </tr>
 <tr class="error">
 <td><i class="icon-remove"></i></td>
-<td>Data at rest</td>
+<td>Privacy &amp; EULA</td>
 <td>-10</td>
 </tr>
 <tr class="warning">
@@ -7508,12 +7511,12 @@ button.close {
 <tr class="success">
 <td><i class="icon-ok"></i></td>
 <td>Advertising</td>
-<td>+5</td>
+<td>+10</td>
 </tr>
 <tr class="success">
 <td><i class="icon-ok"></i></td>
 <td>History</td>
-<td>+10</td>
+<td>+0</td>
 </tr>
 </table>           
 
@@ -7536,63 +7539,89 @@ button.close {
 </div>
 
 
-           <div class="bad-block">Authentication &amp; Session Management</div>
-           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-           <ul>
-             <li class="bad">No two-factor support</li>
-             <li class="bad">No federated authentication (e.g. OpenID)</li>
-             <li class="bad">Question/Answer used for password reset</li>
-             <li class="good">Cookies only over TLS</li>
-           </ul>
-
-           <div class="bad-block">Privacy &amp; EULA</div>
-           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-           <ul>
-             <li class="bad">May provide your details to third parties</li>
-             <li class="bad">May use your details for marketing purposes</li>
-             <li class="good">Non-restrictive EULA</li>
-           </ul>
-           <p>Privacy policy | End User Licence Agreement</p>
-
-           <div class="bad-block">Data at rest</div>
+           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
            <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="bad">Provides only minimal details on cryptography and security implementations</li>
-             <li class="bad">Can decrypt user data</li>
-             <li class="good">Uses bcrypt for storing passwords</li>
+             <li class="bad">Provides only minimal details on cryptography and security implementations (-20)</li>
+             <li class="bad">Can decrypt user data (-15)</li>
+             <li class="good">Uses bcrypt for storing passwords (+15)</li>
            </ul>
-           <p>Technical specifications</p>
+           <p><a href="#">Technical specifications</a></p>
 
-           <div class="warn-block">Data in transit</div>
+           <div class="bad-block">Authentication &amp; Session Management (-10)</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">No two-factor support (-5)</li>
+             <li class="bad">No federated authentication (-5)</li>
+             <li class="bad">Question/Answer used for password reset (-10)</li>
+             <li class="good">Cookies only over TLS (+10)</li>
+           </ul>
+           <br/>
+
+           <div class="bad-block">Privacy &amp; EULA (-10)</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">May provide your details to third parties (-10)</li>
+             <li class="bad">May use your details for marketing purposes (-5)</li>
+             <li class="good">Non-restrictive EULA (+5)</li>
+           </ul>
+           <p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p>
+           <br/>
+
+           <div class="warn-block">Data in Motion (-5)</div>
            <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">Defaults to weak TLS implemenation</li>
-             <li class="good">TLS  used on whole site</li>
+             <li class="bad">Defaults to weak TLS implemenation (-10)</li>
+             <li class="good">TLS used on whole site (+5)</li>
            </ul>
+           <br/>
 
-           <div class="good-block">Disclosure</div>
+           <div class="good-block">Disclosure (+5)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">No bug bounty programme</li>
-             <li class="good">Appropriate disclosure policy</li>
+             <li class="bad">No bug bounty programme (-5)</li>
+             <li class="good">Appropriate disclosure policy (+10)</li>
            </ul>
-           <p>Bug bounty programme | Disclosure policy</p>
+           <p><a href="#">Privacy policy</a>Bug bounty programme</a> | <a href="#">Privacy policy</a>Disclosure policy</a></p>
+           <br/>
 
-           <div class="good-block">Advertising</div>
+           <div class="good-block">Advertising (+10)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="good">No advertising</li>
+             <li class="good">No advertising (+10)</li>
            </ul>
+           <br/>
 
-           <div class="good-block">History</div>
+           <div class="good-block">History (+0)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="good">No known security incidents</li>
+             <li class="good">No known security incidents (+0)</li>
            </ul>
+           <br/>
 
            <p class="pull-right">view summary report</p>
+
+<script type="text/javascript">
+  $(function ()
+  { 
+    $('#data_at_rest').tooltip();
+  });
+</script>
+<br/>
+<hr>
+
+<h2>Comments</h2>
+
+<p>Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
 
 
         </div> <!-- main content -->
@@ -7606,7 +7635,7 @@ button.close {
               <li>github.com - 8/10</li>
               <li>twitter.com - 7/10</li>
             </ul>
-
+          <br/>
           <div class="title-block"><b>Hall of Shame</b></div>
             <ul>
               <li>microsoft.com - 3/10</li>
@@ -7615,6 +7644,7 @@ button.close {
               <li>ubuntu.com - 5/10</li>
             </ul>
 
+          <br/>
           <div class="title-block"><b>Recent sites</b></div>
             <ul>
               <li>microsoft.com - 3/10</li>
@@ -7623,6 +7653,7 @@ button.close {
               <li>ubuntu.com - 5/10</li>
             </ul>
 
+          <br/>
 	  <div class="title-block"><b>Trends</b></div>
             <ul>
               <li>Global index: 145 (+10)</li>
@@ -7634,74 +7665,88 @@ button.close {
 
       <hr>
       <div class="footer">
-        <p>About | Privacy | Contact | Creative Commons blah</p>
+        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
       </div>
 
     </div> <!-- /container -->
 
   </body>
 </html>
-;T;	I"ã<%= render 'report_header' %>
+;T;	I"h<%= render 'report_header' %>
 
-           <div class="bad-block">Authentication &amp; Session Management</div>
-           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-           <ul>
-             <li class="bad">No two-factor support</li>
-             <li class="bad">No federated authentication (e.g. OpenID)</li>
-             <li class="bad">Question/Answer used for password reset</li>
-             <li class="good">Cookies only over TLS</li>
-           </ul>
-
-           <div class="bad-block">Privacy &amp; EULA</div>
-           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-           <ul>
-             <li class="bad">May provide your details to third parties</li>
-             <li class="bad">May use your details for marketing purposes</li>
-             <li class="good">Non-restrictive EULA</li>
-           </ul>
-           <p>Privacy policy | End User Licence Agreement</p>
-
-           <div class="bad-block">Data at rest</div>
+           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
            <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="bad">Provides only minimal details on cryptography and security implementations</li>
-             <li class="bad">Can decrypt user data</li>
-             <li class="good">Uses bcrypt for storing passwords</li>
+             <li class="bad">Provides only minimal details on cryptography and security implementations (-20)</li>
+             <li class="bad">Can decrypt user data (-15)</li>
+             <li class="good">Uses bcrypt for storing passwords (+15)</li>
            </ul>
-           <p>Technical specifications</p>
+           <p><a href="#">Technical specifications</a></p>
 
-           <div class="warn-block">Data in transit</div>
+           <div class="bad-block">Authentication &amp; Session Management (-10)</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">No two-factor support (-5)</li>
+             <li class="bad">No federated authentication (-5)</li>
+             <li class="bad">Question/Answer used for password reset (-10)</li>
+             <li class="good">Cookies only over TLS (+10)</li>
+           </ul>
+           <br/>
+
+           <div class="bad-block">Privacy &amp; EULA (-10)</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">May provide your details to third parties (-10)</li>
+             <li class="bad">May use your details for marketing purposes (-5)</li>
+             <li class="good">Non-restrictive EULA (+5)</li>
+           </ul>
+           <p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p>
+           <br/>
+
+           <div class="warn-block">Data in Motion (-5)</div>
            <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">Defaults to weak TLS implemenation</li>
-             <li class="good">TLS  used on whole site</li>
+             <li class="bad">Defaults to weak TLS implemenation (-10)</li>
+             <li class="good">TLS used on whole site (+5)</li>
            </ul>
+           <br/>
 
-           <div class="good-block">Disclosure</div>
+           <div class="good-block">Disclosure (+5)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">No bug bounty programme</li>
-             <li class="good">Appropriate disclosure policy</li>
+             <li class="bad">No bug bounty programme (-5)</li>
+             <li class="good">Appropriate disclosure policy (+10)</li>
            </ul>
-           <p>Bug bounty programme | Disclosure policy</p>
+           <p><a href="#">Privacy policy</a>Bug bounty programme</a> | <a href="#">Privacy policy</a>Disclosure policy</a></p>
+           <br/>
 
-           <div class="good-block">Advertising</div>
+           <div class="good-block">Advertising (+10)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="good">No advertising</li>
+             <li class="good">No advertising (+10)</li>
            </ul>
+           <br/>
 
-           <div class="good-block">History</div>
+           <div class="good-block">History (+0)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="good">No known security incidents</li>
+             <li class="good">No known security incidents (+0)</li>
            </ul>
+           <br/>
 
            <p class="pull-right">view summary report</p>
+
+<script type="text/javascript">
+  $(function ()
+  { 
+    $('#data_at_rest').tooltip();
+  });
+</script>
+<%= render 'comments' %>
 ;T;
-I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
+I"j"<h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
 <div class="row">
@@ -7709,17 +7754,17 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 <table class="table">
 <tr class="error">
 <td><i class="icon-remove"></i></td>
-<td>Authentication &amp; Session Management</td>
+<td>Data at rest</td>
 <td>-20</td>
 </tr>
 <tr class="error">
 <td><i class="icon-remove"></i></td>
-<td>Privacy &amp; EULA</td>
+<td>Authentication &amp; Session Management</td>
 <td>-10</td>
 </tr>
 <tr class="error">
 <td><i class="icon-remove"></i></td>
-<td>Data at rest</td>
+<td>Privacy &amp; EULA</td>
 <td>-10</td>
 </tr>
 <tr class="warning">
@@ -7735,12 +7780,12 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 <tr class="success">
 <td><i class="icon-ok"></i></td>
 <td>Advertising</td>
-<td>+5</td>
+<td>+10</td>
 </tr>
 <tr class="success">
 <td><i class="icon-ok"></i></td>
 <td>History</td>
-<td>+10</td>
+<td>+0</td>
 </tr>
 </table>           
 
@@ -7763,64 +7808,90 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 </div>
 
 
-           <div class="bad-block">Authentication &amp; Session Management</div>
-           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-           <ul>
-             <li class="bad">No two-factor support</li>
-             <li class="bad">No federated authentication (e.g. OpenID)</li>
-             <li class="bad">Question/Answer used for password reset</li>
-             <li class="good">Cookies only over TLS</li>
-           </ul>
-
-           <div class="bad-block">Privacy &amp; EULA</div>
-           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
-           <ul>
-             <li class="bad">May provide your details to third parties</li>
-             <li class="bad">May use your details for marketing purposes</li>
-             <li class="good">Non-restrictive EULA</li>
-           </ul>
-           <p>Privacy policy | End User Licence Agreement</p>
-
-           <div class="bad-block">Data at rest</div>
+           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
            <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="bad">Provides only minimal details on cryptography and security implementations</li>
-             <li class="bad">Can decrypt user data</li>
-             <li class="good">Uses bcrypt for storing passwords</li>
+             <li class="bad">Provides only minimal details on cryptography and security implementations (-20)</li>
+             <li class="bad">Can decrypt user data (-15)</li>
+             <li class="good">Uses bcrypt for storing passwords (+15)</li>
            </ul>
-           <p>Technical specifications</p>
+           <p><a href="#">Technical specifications</a></p>
 
-           <div class="warn-block">Data in transit</div>
+           <div class="bad-block">Authentication &amp; Session Management (-10)</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">No two-factor support (-5)</li>
+             <li class="bad">No federated authentication (-5)</li>
+             <li class="bad">Question/Answer used for password reset (-10)</li>
+             <li class="good">Cookies only over TLS (+10)</li>
+           </ul>
+           <br/>
+
+           <div class="bad-block">Privacy &amp; EULA (-10)</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <ul>
+             <li class="bad">May provide your details to third parties (-10)</li>
+             <li class="bad">May use your details for marketing purposes (-5)</li>
+             <li class="good">Non-restrictive EULA (+5)</li>
+           </ul>
+           <p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p>
+           <br/>
+
+           <div class="warn-block">Data in Motion (-5)</div>
            <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">Defaults to weak TLS implemenation</li>
-             <li class="good">TLS  used on whole site</li>
+             <li class="bad">Defaults to weak TLS implemenation (-10)</li>
+             <li class="good">TLS used on whole site (+5)</li>
            </ul>
+           <br/>
 
-           <div class="good-block">Disclosure</div>
+           <div class="good-block">Disclosure (+5)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
            <ul>
-             <li class="bad">No bug bounty programme</li>
-             <li class="good">Appropriate disclosure policy</li>
+             <li class="bad">No bug bounty programme (-5)</li>
+             <li class="good">Appropriate disclosure policy (+10)</li>
            </ul>
-           <p>Bug bounty programme | Disclosure policy</p>
+           <p><a href="#">Privacy policy</a>Bug bounty programme</a> | <a href="#">Privacy policy</a>Disclosure policy</a></p>
+           <br/>
 
-           <div class="good-block">Advertising</div>
+           <div class="good-block">Advertising (+10)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="good">No advertising</li>
+             <li class="good">No advertising (+10)</li>
            </ul>
+           <br/>
 
-           <div class="good-block">History</div>
+           <div class="good-block">History (+0)</div>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
            <ul>
-             <li class="good">No known security incidents</li>
+             <li class="good">No known security incidents (+0)</li>
            </ul>
+           <br/>
 
            <p class="pull-right">view summary report</p>
-;T:	post@I"/img/badge_circle_cross/;T{;{ I"#/img/flags/united_states_flag/;T{;{ I"%/img/glyphicons-halflings-white/;T{;{ I"/img/glyphicons-halflings/;T{;{ I"/img/tick_circle/;T{;{ I"/;T{;{	;I"·<!DOCTYPE html>
+
+<script type="text/javascript">
+  $(function ()
+  { 
+    $('#data_at_rest').tooltip();
+  });
+</script>
+<br/>
+<hr>
+
+<h2>Comments</h2>
+
+<p>Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+;T:	post@I"/img/badge_circle_cross/;T{;{ I"#/img/flags/united_states_flag/;T{;{ I"%/img/glyphicons-halflings-white/;T{;{ I"/img/glyphicons-halflings/;T{;{ I"/img/tick_circle/;T{;{ I"/;T{;{	;I"<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7833,6 +7904,9 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="/css/webnark.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -7883,7 +7957,7 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
               <li>github.com - 8/10</li>
               <li>twitter.com - 7/10</li>
             </ul>
-
+          <br/>
           <div class="title-block"><b>Hall of Shame</b></div>
             <ul>
               <li>microsoft.com - 3/10</li>
@@ -7892,6 +7966,7 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
               <li>ubuntu.com - 5/10</li>
             </ul>
 
+          <br/>
           <div class="title-block"><b>Recent sites</b></div>
             <ul>
               <li>microsoft.com - 3/10</li>
@@ -7900,6 +7975,7 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
               <li>ubuntu.com - 5/10</li>
             </ul>
 
+          <br/>
 	  <div class="title-block"><b>Trends</b></div>
             <ul>
               <li>Global index: 145 (+10)</li>
@@ -7911,7 +7987,7 @@ I"<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
       <hr>
       <div class="footer">
-        <p>About | Privacy | Contact | Creative Commons blah</p>
+        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
       </div>
 
     </div> <!-- /container -->
@@ -10592,4 +10668,548 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
         margin-bottom: 5px;
       }
 ;T;	@7;
-@7:versioni
+@7I"/fuller_report/;T{;{	;I"§F<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webnark - zeroXten - v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/webnark.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Webnark</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row"> <!-- container row -->
+
+        <div class="span9"> <!-- Main content -->
+
+         <!-- Search bar -->
+         <div class="input-append">
+          <input class="span8" id="appendedInputButton" type="text" placeholder="domain.com">
+          <button class="btn" type="button">Search</button>
+         </div>
+
+        <h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
+<p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
+
+<div class="row">
+<div class="span6">
+<table class="table">
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Data at rest</td>
+<td>-20</td>
+</tr>
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Authentication &amp; Session Management</td>
+<td>-10</td>
+</tr>
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Privacy &amp; EULA</td>
+<td>-10</td>
+</tr>
+<tr class="warning">
+<td><i class="icon-minus"></i></td>
+<td>Data in transit</td>
+<td>-5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>Disclosure</td>
+<td>+5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>Advertising</td>
+<td>+10</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>History</td>
+<td>+0</td>
+</tr>
+</table>           
+
+<br/>
+<p>In hac habitasse platea dictumst. Aenean vitae dignissim dui. Maecenas eget lorem varius, tincidunt nulla et, dapibus sapien. Cras aliquet tortor vel nulla luctus sodales. Aliquam quis urna neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra quam vitae libero vestibulum tristique. Sed ligula ante, aliquam sit amet tortor quis, sagittis scelerisque nisl.</p>
+<br/>
+</div>
+
+<div class="span3">
+<span class="text-center">
+<div class="good-block good score">9/10</div>
+<br/>
+<img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
+<br/>
+<p>Hosted in <img alt="us" src="/img/flags/united_states_flag.png" width="16" height="16"> by Dropbox, Inc.</p>
+</span>
+
+</div>
+
+</div>
+
+
+           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <hr>
+           <p class="bad">Provides only minimal details on cryptography and security implementations (-20)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+             <p class="bad">Can decrypt user data (-15)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+             <p class="good">Uses bcrypt for storing passwords (+15)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+           <p><a href="#">Technical specifications</a></p>
+
+           <div class="bad-block">Authentication &amp; Session Management (-10)</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">No two-factor support (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+             <p class="bad">No federated authentication (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">Question/Answer used for password reset (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">Cookies only over TLS (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+           <div class="bad-block">Privacy &amp; EULA (-10)</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">May provide your details to third parties (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">May use your details for marketing purposes (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">Non-restrictive EULA (+5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+           <p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p>
+           <br/>
+
+           <div class="warn-block">Data in Motion (-5)</div>
+           <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="bad">Defaults to weak TLS implemenation (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">TLS used on whole site (+5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <div class="good-block">Disclosure (+5)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="bad">No bug bounty programme (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+             <p class="good">Appropriate disclosure policy (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <p><a href="#">Bug bounty programme</a> | <a href="#">Disclosure policy</a></p>
+
+           <div class="good-block">Advertising (+10)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="good">No advertising (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+
+           <div class="good-block">History (+0)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="good">No known security incidents (+0)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <p class="pull-right">view summary report</p>
+
+<script type="text/javascript">
+  $(function ()
+  { 
+    $('#data_at_rest').tooltip();
+  });
+</script>
+<br/>
+<hr>
+
+<h2>Comments</h2>
+
+<p>Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+
+
+        </div> <!-- main content -->
+
+        <div class="span3"> <!-- right side bar -->
+
+          <div class="title-block"><b>Hall of Fame</b></div>
+            <ul>
+              <li>google.com - 9/10</li>
+              <li>yahoo.com - 8/10</li>
+              <li>github.com - 8/10</li>
+              <li>twitter.com - 7/10</li>
+            </ul>
+          <br/>
+          <div class="title-block"><b>Hall of Shame</b></div>
+            <ul>
+              <li>microsoft.com - 3/10</li>
+              <li>facebook.com - 4/10</li>
+              <li>mysql.com - 4/10</li>
+              <li>ubuntu.com - 5/10</li>
+            </ul>
+
+          <br/>
+          <div class="title-block"><b>Recent sites</b></div>
+            <ul>
+              <li>microsoft.com - 3/10</li>
+              <li>facebook.com - 4/10</li>
+              <li>mysql.com - 4/10</li>
+              <li>ubuntu.com - 5/10</li>
+            </ul>
+
+          <br/>
+	  <div class="title-block"><b>Trends</b></div>
+            <ul>
+              <li>Global index: 145 (+10)</li>
+              <li>Global average: 6/10</li>
+            </ul>
+          </div>
+
+      </div> <!-- container row -->
+
+      <hr>
+      <div class="footer">
+        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+;T;	I"≥,<%= render 'report_header' %>
+
+           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <hr>
+           <p class="bad">Provides only minimal details on cryptography and security implementations (-20)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+             <p class="bad">Can decrypt user data (-15)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+             <p class="good">Uses bcrypt for storing passwords (+15)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+           <p><a href="#">Technical specifications</a></p>
+
+           <div class="bad-block">Authentication &amp; Session Management (-10)</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">No two-factor support (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+             <p class="bad">No federated authentication (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">Question/Answer used for password reset (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">Cookies only over TLS (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+           <div class="bad-block">Privacy &amp; EULA (-10)</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">May provide your details to third parties (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">May use your details for marketing purposes (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">Non-restrictive EULA (+5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+           <p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p>
+           <br/>
+
+           <div class="warn-block">Data in Motion (-5)</div>
+           <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="bad">Defaults to weak TLS implemenation (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">TLS used on whole site (+5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <div class="good-block">Disclosure (+5)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="bad">No bug bounty programme (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+             <p class="good">Appropriate disclosure policy (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <p><a href="#">Bug bounty programme</a> | <a href="#">Disclosure policy</a></p>
+
+           <div class="good-block">Advertising (+10)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="good">No advertising (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+
+           <div class="good-block">History (+0)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="good">No known security incidents (+0)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <p class="pull-right">view summary report</p>
+
+<script type="text/javascript">
+  $(function ()
+  { 
+    $('#data_at_rest').tooltip();
+  });
+</script>
+<%= render 'comments' %>
+;T;
+I"µ9<h2>Security report for <a href="http://google.com/">Google Web Search</a> (search engine)</h2>
+<p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
+
+<div class="row">
+<div class="span6">
+<table class="table">
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Data at rest</td>
+<td>-20</td>
+</tr>
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Authentication &amp; Session Management</td>
+<td>-10</td>
+</tr>
+<tr class="error">
+<td><i class="icon-remove"></i></td>
+<td>Privacy &amp; EULA</td>
+<td>-10</td>
+</tr>
+<tr class="warning">
+<td><i class="icon-minus"></i></td>
+<td>Data in transit</td>
+<td>-5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>Disclosure</td>
+<td>+5</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>Advertising</td>
+<td>+10</td>
+</tr>
+<tr class="success">
+<td><i class="icon-ok"></i></td>
+<td>History</td>
+<td>+0</td>
+</tr>
+</table>           
+
+<br/>
+<p>In hac habitasse platea dictumst. Aenean vitae dignissim dui. Maecenas eget lorem varius, tincidunt nulla et, dapibus sapien. Cras aliquet tortor vel nulla luctus sodales. Aliquam quis urna neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra quam vitae libero vestibulum tristique. Sed ligula ante, aliquam sit amet tortor quis, sagittis scelerisque nisl.</p>
+<br/>
+</div>
+
+<div class="span3">
+<span class="text-center">
+<div class="good-block good score">9/10</div>
+<br/>
+<img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
+<br/>
+<p>Hosted in <img alt="us" src="/img/flags/united_states_flag.png" width="16" height="16"> by Dropbox, Inc.</p>
+</span>
+
+</div>
+
+</div>
+
+
+           <div class="bad-block"><a href="#" id="data_at_rest" data-toggle="tooltip" title="Data at Rest is an IT term referring to inactive data which is stored physically in any digital form (e.g. databases, data warehouses, spreadsheets, archives, tapes, off-site backups, mobile devices etc.). [1]">Data at Rest (-20)</a></div>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+           <hr>
+           <p class="bad">Provides only minimal details on cryptography and security implementations (-20)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+             <p class="bad">Can decrypt user data (-15)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+             <p class="good">Uses bcrypt for storing passwords (+15)</p>
+           <p>Lorem , fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+<hr>
+           <p><a href="#">Technical specifications</a></p>
+
+           <div class="bad-block">Authentication &amp; Session Management (-10)</div>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">No two-factor support (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+             <p class="bad">No federated authentication (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">Question/Answer used for password reset (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">Cookies only over TLS (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+           <div class="bad-block">Privacy &amp; EULA (-10)</div>
+           <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">May provide your details to third parties (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="bad">May use your details for marketing purposes (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">Non-restrictive EULA (+5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+           <p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p>
+           <br/>
+
+           <div class="warn-block">Data in Motion (-5)</div>
+           <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="bad">Defaults to weak TLS implemenation (-10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+             <p class="good">TLS used on whole site (+5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <div class="good-block">Disclosure (+5)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="bad">No bug bounty programme (-5)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+             <p class="good">Appropriate disclosure policy (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <p><a href="#">Bug bounty programme</a> | <a href="#">Disclosure policy</a></p>
+
+           <div class="good-block">Advertising (+10)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="good">No advertising (+10)</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+
+           <div class="good-block">History (+0)</div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+
+<hr>
+             <p class="good">No known security incidents (+0)</p>
+           <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
+             <hr>
+
+           <p class="pull-right">view summary report</p>
+
+<script type="text/javascript">
+  $(function ()
+  { 
+    $('#data_at_rest').tooltip();
+  });
+</script>
+<br/>
+<hr>
+
+<h2>Comments</h2>
+
+<p>Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
+
+;T;@;:versioni
