@@ -36,11 +36,11 @@
         color: red;
       }
 
-      .bad-block {
-        background-color: #F8E0E0;
-        padding: 10px;
-        margin-bottom: 5px;
-      }
+.bad-block {
+  background-color: #F8E0E0;
+  padding: 10px;
+  margin-bottom: 5px;
+}
 
       li.bad {
         list-style-image:url('/img/badge_circle_cross.png');
@@ -53,10 +53,16 @@
         margin-bottom: 5px;
       }
 
-.table td.right {
-  text-align: right; 
-}
-
 .points {
   font-weight: bold;
+}
+
+.summary-table {
+  border: 2px dashed #e0e0e0;
+}
+
+.summary-table td {
+  padding: 10px 10px 0px 10px;
+  text-align: right;
+  vertical-align: top;
 }

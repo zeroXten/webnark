@@ -7425,7 +7425,7 @@ button.close {
   }
 }
 ;T;	@;
-@I"/full_report/;T{;{	;I"±/<!DOCTYPE html>
+@I"/full_report/;T{;{	;I"á/<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7482,7 +7482,7 @@ button.close {
 
 <div class="row">
 <div class="span6">
-<table class="table table-condensed" style="background-color: #f5f5f5">
+<table class="summary-table">
 
 <tr>
   <td style="width: 50%">Data at Rest</td>
@@ -7752,12 +7752,12 @@ button.close {
 </script>
 <%= render 'comments' %>
 ;T;
-I"¬"<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
+I"ò"<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
 <div class="row">
 <div class="span6">
-<table class="table table-condensed" style="background-color: #f5f5f5">
+<table class="summary-table">
 
 <tr>
   <td style="width: 50%">Data at Rest</td>
@@ -10628,7 +10628,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
 
 </div>
-;T;@1I"/css/webnark/;T{;{;I"Û      body {
+;T;@1I"/css/webnark/;T{;{;I">      body {
         padding-top: 60px;
         padding-bottom: 60px;
       }
@@ -10666,11 +10666,11 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
         color: red;
       }
 
-      .bad-block {
-        background-color: #F8E0E0;
-        padding: 10px;
-        margin-bottom: 5px;
-      }
+.bad-block {
+  background-color: #F8E0E0;
+  padding: 10px;
+  margin-bottom: 5px;
+}
 
       li.bad {
         list-style-image:url('/img/badge_circle_cross.png');
@@ -10683,15 +10683,21 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
         margin-bottom: 5px;
       }
 
-.table td.right {
-  text-align: right; 
-}
-
 .points {
   font-weight: bold;
 }
+
+.summary-table {
+  border: 2px dashed #e0e0e0;
+}
+
+.summary-table td {
+  padding: 10px 10px 0px 10px;
+  text-align: right;
+  vertical-align: top;
+}
 ;T;	@7;
-@7I"/fuller_report/;T{;{	;I"OB<!DOCTYPE html>
+@7I"/fuller_report/;T{;{	;I"ZE<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10748,7 +10754,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
 <div class="row">
 <div class="span6">
-<table class="table table-condensed" style="background-color: #f5f5f5">
+<table class="summary-table">
 
 <tr>
   <td style="width: 50%">Data at Rest</td>
@@ -10811,7 +10817,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 </div>
 
 
-<div class="bad-block">Data at Rest <span class="pull-right points">-20 points</span></div>
+<div class="bad-block">Data at Rest <span class="pull-right points">-20 points total</span></div>
 <p>Refers to inactive data which is stored physically in any digital form (e.g. harddisk, USB drive, CDs and DVDs etc.).
 <hr>
 
@@ -10832,7 +10838,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
 <div class="text-right"><p><a href="#">Technical specifications</a></p></div>
 
-<div class="bad-block">Authentication &amp; Session Management (-10)</div>
+<div class="bad-block">Authentication &amp; Session Management <span class="pull-right points">-10 points total</span></div>
 <p>Authentication is proving you are who you say you are and session management is the process of maintaining that trust once established. Most website and services require you to register your details and then log in to use the service, often using a username and password.</p>
 <blockquote>Only a limited choice for authenication and the password reset method is weak.</blockquote>
 <hr>
@@ -10841,70 +10847,70 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 <p>Two-factor adds an additional authentication method to existing methods such as username and password. Passwords provide a 'something you know' whereas two-factor often provides a 'something you have'. Even if a password is compromised, the account cannot be access without the second authentication method. Hardware tokens, SMS messages and mobile phone applications are often used as the second factor. For additional security, the second-factor tokens often have a very short life span so cannot be recorded and used later.</p>
 <hr>
 
-<p class="bad">No federated authentication (-5)</p>
+<p class="bad">No federated authentication <span class="pull-right points">-5 points</span></p>
 <p></p>
 <hr>
-<p class="bad">Question/Answer used for password reset (-10)</p>
+<p class="bad">Question/Answer used for password reset <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">Cookies only over TLS (+10)</p>
+<p class="good">Cookies only over TLS <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<div class="bad-block">Privacy &amp; EULA (-10)</div>
+<div class="bad-block">Privacy &amp; EULA <span class="pull-right points">-10 points total</span></div>
 <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="bad">May provide your details to third parties (-10)</p>
+<p class="bad">May provide your details to third parties <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="bad">May use your details for marketing purposes (-5)</p>
+<p class="bad">May use your details for marketing purposes <span class="pull-right points">-5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">Non-restrictive EULA (+5)</p>
+<p class="good">Non-restrictive EULA <span class="pull-right points">+5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <div class="text-right"><p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p></div>
 <br/>
 
-<div class="warn-block">Data in Motion (-5)</div>
+<div class="warn-block">Data in Motion <span class="pull-right points">-5 points total</span></div>
 <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="bad">Defaults to weak TLS implemenation (-10)</p>
+<p class="bad">Defaults to weak TLS implemenation <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">TLS used on whole site (+5)</p>
+<p class="good">TLS used on whole site <span class="pull-right points">+5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
-<div class="good-block">Disclosure (+5)</div>
+<div class="good-block">Disclosure <span class="pull-right points">+5 points</span></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="bad">No bug bounty programme (-5)</p>
+<p class="bad">No bug bounty programme <span class="pull-right points">-5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
-<p class="good">Appropriate disclosure policy (+10)</p>
+<p class="good">Appropriate disclosure policy <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
 <div class="text-right"><p><a href="#">Bug bounty programme</a> | <a href="#">Disclosure policy</a></p></div>
 
-<div class="good-block">Advertising (+10)</div>
+<div class="good-block">Advertising <span class="pull-right points">+10 points total</span></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="good">No advertising (+10)</p>
+<p class="good">No advertising <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
 
-<div class="good-block">History (+0)</div>
+<div class="good-block">History <span class="pull-right points">+0 points total</div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="good">No known security incidents (+0)</p>
+<p class="good">No known security incidents <span class="pull-right points">+0 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
@@ -10973,9 +10979,9 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
   </body>
 </html>
-;T;	I"(<%= render 'report_header' %>
+;T;	I";+<%= render 'report_header' %>
 
-<div class="bad-block">Data at Rest <span class="pull-right points">-20 points</span></div>
+<div class="bad-block">Data at Rest <span class="pull-right points">-20 points total</span></div>
 <p>Refers to inactive data which is stored physically in any digital form (e.g. harddisk, USB drive, CDs and DVDs etc.).
 <hr>
 
@@ -10996,7 +11002,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
 <div class="text-right"><p><a href="#">Technical specifications</a></p></div>
 
-<div class="bad-block">Authentication &amp; Session Management (-10)</div>
+<div class="bad-block">Authentication &amp; Session Management <span class="pull-right points">-10 points total</span></div>
 <p>Authentication is proving you are who you say you are and session management is the process of maintaining that trust once established. Most website and services require you to register your details and then log in to use the service, often using a username and password.</p>
 <blockquote>Only a limited choice for authenication and the password reset method is weak.</blockquote>
 <hr>
@@ -11005,70 +11011,70 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 <p>Two-factor adds an additional authentication method to existing methods such as username and password. Passwords provide a 'something you know' whereas two-factor often provides a 'something you have'. Even if a password is compromised, the account cannot be access without the second authentication method. Hardware tokens, SMS messages and mobile phone applications are often used as the second factor. For additional security, the second-factor tokens often have a very short life span so cannot be recorded and used later.</p>
 <hr>
 
-<p class="bad">No federated authentication (-5)</p>
+<p class="bad">No federated authentication <span class="pull-right points">-5 points</span></p>
 <p></p>
 <hr>
-<p class="bad">Question/Answer used for password reset (-10)</p>
+<p class="bad">Question/Answer used for password reset <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">Cookies only over TLS (+10)</p>
+<p class="good">Cookies only over TLS <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<div class="bad-block">Privacy &amp; EULA (-10)</div>
+<div class="bad-block">Privacy &amp; EULA <span class="pull-right points">-10 points total</span></div>
 <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="bad">May provide your details to third parties (-10)</p>
+<p class="bad">May provide your details to third parties <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="bad">May use your details for marketing purposes (-5)</p>
+<p class="bad">May use your details for marketing purposes <span class="pull-right points">-5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">Non-restrictive EULA (+5)</p>
+<p class="good">Non-restrictive EULA <span class="pull-right points">+5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <div class="text-right"><p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p></div>
 <br/>
 
-<div class="warn-block">Data in Motion (-5)</div>
+<div class="warn-block">Data in Motion <span class="pull-right points">-5 points total</span></div>
 <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="bad">Defaults to weak TLS implemenation (-10)</p>
+<p class="bad">Defaults to weak TLS implemenation <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">TLS used on whole site (+5)</p>
+<p class="good">TLS used on whole site <span class="pull-right points">+5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
-<div class="good-block">Disclosure (+5)</div>
+<div class="good-block">Disclosure <span class="pull-right points">+5 points</span></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="bad">No bug bounty programme (-5)</p>
+<p class="bad">No bug bounty programme <span class="pull-right points">-5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
-<p class="good">Appropriate disclosure policy (+10)</p>
+<p class="good">Appropriate disclosure policy <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
 <div class="text-right"><p><a href="#">Bug bounty programme</a> | <a href="#">Disclosure policy</a></p></div>
 
-<div class="good-block">Advertising (+10)</div>
+<div class="good-block">Advertising <span class="pull-right points">+10 points total</span></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="good">No advertising (+10)</p>
+<p class="good">No advertising <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
 
-<div class="good-block">History (+0)</div>
+<div class="good-block">History <span class="pull-right points">+0 points total</div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="good">No known security incidents (+0)</p>
+<p class="good">No known security incidents <span class="pull-right points">+0 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
@@ -11076,12 +11082,12 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
 <%= render 'comments' %>
 ;T;
-I"`5<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
+I"k8<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
 <div class="row">
 <div class="span6">
-<table class="table table-condensed" style="background-color: #f5f5f5">
+<table class="summary-table">
 
 <tr>
   <td style="width: 50%">Data at Rest</td>
@@ -11144,7 +11150,7 @@ I"`5<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 </div>
 
 
-<div class="bad-block">Data at Rest <span class="pull-right points">-20 points</span></div>
+<div class="bad-block">Data at Rest <span class="pull-right points">-20 points total</span></div>
 <p>Refers to inactive data which is stored physically in any digital form (e.g. harddisk, USB drive, CDs and DVDs etc.).
 <hr>
 
@@ -11165,7 +11171,7 @@ I"`5<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 
 <div class="text-right"><p><a href="#">Technical specifications</a></p></div>
 
-<div class="bad-block">Authentication &amp; Session Management (-10)</div>
+<div class="bad-block">Authentication &amp; Session Management <span class="pull-right points">-10 points total</span></div>
 <p>Authentication is proving you are who you say you are and session management is the process of maintaining that trust once established. Most website and services require you to register your details and then log in to use the service, often using a username and password.</p>
 <blockquote>Only a limited choice for authenication and the password reset method is weak.</blockquote>
 <hr>
@@ -11174,70 +11180,70 @@ I"`5<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p>Two-factor adds an additional authentication method to existing methods such as username and password. Passwords provide a 'something you know' whereas two-factor often provides a 'something you have'. Even if a password is compromised, the account cannot be access without the second authentication method. Hardware tokens, SMS messages and mobile phone applications are often used as the second factor. For additional security, the second-factor tokens often have a very short life span so cannot be recorded and used later.</p>
 <hr>
 
-<p class="bad">No federated authentication (-5)</p>
+<p class="bad">No federated authentication <span class="pull-right points">-5 points</span></p>
 <p></p>
 <hr>
-<p class="bad">Question/Answer used for password reset (-10)</p>
+<p class="bad">Question/Answer used for password reset <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">Cookies only over TLS (+10)</p>
+<p class="good">Cookies only over TLS <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<div class="bad-block">Privacy &amp; EULA (-10)</div>
+<div class="bad-block">Privacy &amp; EULA <span class="pull-right points">-10 points total</span></div>
 <p>sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="bad">May provide your details to third parties (-10)</p>
+<p class="bad">May provide your details to third parties <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="bad">May use your details for marketing purposes (-5)</p>
+<p class="bad">May use your details for marketing purposes <span class="pull-right points">-5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">Non-restrictive EULA (+5)</p>
+<p class="good">Non-restrictive EULA <span class="pull-right points">+5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <div class="text-right"><p><a href="#">Privacy policy</a> | <a href="#">End User Licence Agreement</a></p></div>
 <br/>
 
-<div class="warn-block">Data in Motion (-5)</div>
+<div class="warn-block">Data in Motion <span class="pull-right points">-5 points total</span></div>
 <p>Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="bad">Defaults to weak TLS implemenation (-10)</p>
+<p class="bad">Defaults to weak TLS implemenation <span class="pull-right points">-10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
-<p class="good">TLS used on whole site (+5)</p>
+<p class="good">TLS used on whole site <span class="pull-right points">+5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
-<div class="good-block">Disclosure (+5)</div>
+<div class="good-block">Disclosure <span class="pull-right points">+5 points</span></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="bad">No bug bounty programme (-5)</p>
+<p class="bad">No bug bounty programme <span class="pull-right points">-5 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
-<p class="good">Appropriate disclosure policy (+10)</p>
+<p class="good">Appropriate disclosure policy <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
 <div class="text-right"><p><a href="#">Bug bounty programme</a> | <a href="#">Disclosure policy</a></p></div>
 
-<div class="good-block">Advertising (+10)</div>
+<div class="good-block">Advertising <span class="pull-right points">+10 points total</span></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="good">No advertising (+10)</p>
+<p class="good">No advertising <span class="pull-right points">+10 points</span></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
 
-<div class="good-block">History (+0)</div>
+<div class="good-block">History <span class="pull-right points">+0 points total</div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 
 <hr>
-<p class="good">No known security incidents (+0)</p>
+<p class="good">No known security incidents <span class="pull-right points">+0 points</span></p>
 <p>Lorem ipsum dolor sit amet, consecteeu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.</p>
 <hr>
 
