@@ -52,3 +52,11 @@
         padding: 5px;
         margin-bottom: 5px;
       }
+
+.table td.right {
+  text-align: right; 
+}
+
+.points {
+  font-weight: bold;
+}
