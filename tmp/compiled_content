@@ -7425,7 +7425,7 @@ button.close {
   }
 }
 ;T;	@;
-@I"/full_report/;T{;{	;I"á/<!DOCTYPE html>
+@I"/full_report/;T{;{	;I"Z3<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7482,49 +7482,58 @@ button.close {
 
 <div class="row">
 <div class="span6">
+<div class="summary">
 <table class="summary-table">
 
 <tr>
-  <td style="width: 50%">Data at Rest</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 10%"></div></div></td>
+  <td class="left">Data at Rest</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 90%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 <tr>
-  <td style="width: 50%">Authentication &amp; Session Management</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
-</tr>
-
-
-<tr>
-  <td style="width: 50%">Privacy &amp; EULA</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
+  <td class="left">Authentication &amp; Session Management</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 40%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Data in Motion</td>
-  <td><div class="progress"><div class="progress bar-warning" style="width: 35%"></div></div></td>
+  <td class="left">Privacy &amp; EULA</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 15%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Disclosure</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 55%"></div></div></td>
+  <td class="left">Data in Motion</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 5%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Advertising</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 85%"></div></div></td>
+  <td class="left">Disclosure</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 20%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">History</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 100%"></div></div></td>
+  <td class="left">Advertising</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 45%"></div><div class="progress"></td>
+</tr>
+
+
+<tr>
+  <td class="left">History</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 90%"></div><div class="progress"></td>
 </tr>
 
 </table>
+</div>
 
 <br/>
 <p>DropBox is a cloud data backup and sync service.</p>
@@ -7752,54 +7761,63 @@ button.close {
 </script>
 <%= render 'comments' %>
 ;T;
-I"ò"<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
+I"k&<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
 <div class="row">
 <div class="span6">
+<div class="summary">
 <table class="summary-table">
 
 <tr>
-  <td style="width: 50%">Data at Rest</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 10%"></div></div></td>
+  <td class="left">Data at Rest</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 90%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 <tr>
-  <td style="width: 50%">Authentication &amp; Session Management</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
-</tr>
-
-
-<tr>
-  <td style="width: 50%">Privacy &amp; EULA</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
+  <td class="left">Authentication &amp; Session Management</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 40%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Data in Motion</td>
-  <td><div class="progress"><div class="progress bar-warning" style="width: 35%"></div></div></td>
+  <td class="left">Privacy &amp; EULA</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 15%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Disclosure</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 55%"></div></div></td>
+  <td class="left">Data in Motion</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 5%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Advertising</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 85%"></div></div></td>
+  <td class="left">Disclosure</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 20%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">History</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 100%"></div></div></td>
+  <td class="left">Advertising</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 45%"></div><div class="progress"></td>
+</tr>
+
+
+<tr>
+  <td class="left">History</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 90%"></div><div class="progress"></td>
 </tr>
 
 </table>
+</div>
 
 <br/>
 <p>DropBox is a cloud data backup and sync service.</p>
@@ -10628,7 +10646,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 <p>Some blurb about this website perhaps. A description. Yes, that would do nicely. With lots words.</p>
 
 </div>
-;T;@1I"/css/webnark/;T{;{;I">      body {
+;T;@1I"/css/webnark/;T{;{;I"∫      body {
         padding-top: 60px;
         padding-bottom: 60px;
       }
@@ -10670,6 +10688,7 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
   background-color: #F8E0E0;
   padding: 10px;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
       li.bad {
@@ -10684,20 +10703,31 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
       }
 
 .points {
-  font-weight: bold;
+}
+
+.summary {
+  border: 2px dashed #e0e0e0;
+  padding: 10px;
 }
 
 .summary-table {
-  border: 2px dashed #e0e0e0;
+  width: 100%;
 }
 
 .summary-table td {
-  padding: 10px 10px 0px 10px;
-  text-align: right;
   vertical-align: top;
+  width: 25%;
 }
+
+.summary-table td.left {
+  vertical-align: top;
+  padding: 0px 10px 0px 0px;
+  text-align: right;
+  width: 50%;
+}
+
 ;T;	@7;
-@7I"/fuller_report/;T{;{	;I"ZE<!DOCTYPE html>
+@7I"/fuller_report/;T{;{	;I"-I<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10754,49 +10784,58 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
 <div class="row">
 <div class="span6">
+<div class="summary">
 <table class="summary-table">
 
 <tr>
-  <td style="width: 50%">Data at Rest</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 10%"></div></div></td>
+  <td class="left">Data at Rest</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 90%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 <tr>
-  <td style="width: 50%">Authentication &amp; Session Management</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
-</tr>
-
-
-<tr>
-  <td style="width: 50%">Privacy &amp; EULA</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
+  <td class="left">Authentication &amp; Session Management</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 40%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Data in Motion</td>
-  <td><div class="progress"><div class="progress bar-warning" style="width: 35%"></div></div></td>
+  <td class="left">Privacy &amp; EULA</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 15%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Disclosure</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 55%"></div></div></td>
+  <td class="left">Data in Motion</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 5%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Advertising</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 85%"></div></div></td>
+  <td class="left">Disclosure</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 20%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">History</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 100%"></div></div></td>
+  <td class="left">Advertising</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 45%"></div><div class="progress"></td>
+</tr>
+
+
+<tr>
+  <td class="left">History</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 90%"></div><div class="progress"></td>
 </tr>
 
 </table>
+</div>
 
 <br/>
 <p>DropBox is a cloud data backup and sync service.</p>
@@ -11082,54 +11121,63 @@ I"ç<h2>Security report for <a href="http://google.com/">Google Web Search</a> 
 
 <%= render 'comments' %>
 ;T;
-I"k8<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
+I"><<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
 <div class="row">
 <div class="span6">
+<div class="summary">
 <table class="summary-table">
 
 <tr>
-  <td style="width: 50%">Data at Rest</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 10%"></div></div></td>
+  <td class="left">Data at Rest</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 90%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 <tr>
-  <td style="width: 50%">Authentication &amp; Session Management</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
-</tr>
-
-
-<tr>
-  <td style="width: 50%">Privacy &amp; EULA</td>
-  <td><div class="progress"><div class="progress bar-danger" style="width: 20%"></div></div></td>
+  <td class="left">Authentication &amp; Session Management</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 40%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Data in Motion</td>
-  <td><div class="progress"><div class="progress bar-warning" style="width: 35%"></div></div></td>
+  <td class="left">Privacy &amp; EULA</td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: 15%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Disclosure</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 55%"></div></div></td>
+  <td class="left">Data in Motion</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 5%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 0%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">Advertising</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 85%"></div></div></td>
+  <td class="left">Disclosure</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 20%"></div><div class="progress"></td>
 </tr>
 
 
 <tr>
-  <td style="width: 50%">History</td>
-  <td><div class="progress"><div class="progress bar-success" style="width: 100%"></div></div></td>
+  <td class="left">Advertising</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 45%"></div><div class="progress"></td>
+</tr>
+
+
+<tr>
+  <td class="left">History</td>
+  <td><div class="progress"><div class="progress bar-warning pull-right" style="width: 0%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: 90%"></div><div class="progress"></td>
 </tr>
 
 </table>
+</div>
 
 <br/>
 <p>DropBox is a cloud data backup and sync service.</p>
@@ -11262,7 +11310,7 @@ I"k8<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
 
-;T;@;I"/progress/;T{;{	;I"J<!DOCTYPE html>
+;T;@;I"/progress/;T{;{	;I"—<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -11314,9 +11362,28 @@ I"k8<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
           <button class="btn" type="button">Search</button>
          </div>
 
-        <div class="progress">
-  <div class="progress bar-danger" style="width: 30%"></div>
-</div>
+        <table style="width: 100%">
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 90%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 0%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 40%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 00%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 0%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 20%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 0%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 80%"></div> </div> </td>
+</tr>
+</table>
 
 
         </div> <!-- main content -->
@@ -11367,11 +11434,49 @@ I"k8<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 
   </body>
 </html>
-;T;	I"`<div class="progress">
-  <div class="progress bar-danger" style="width: 30%"></div>
-</div>
+;T;	I"‚<table style="width: 100%">
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 90%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 0%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 40%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 00%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 0%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 20%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 0%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 80%"></div> </div> </td>
+</tr>
+</table>
 ;T;
-I"`<div class="progress">
-  <div class="progress bar-danger" style="width: 30%"></div>
-</div>
+I"‚<table style="width: 100%">
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 90%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 0%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 40%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 00%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 0%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 20%"></div> </div> </td>
+</tr>
+<tr>
+<td style="width: 34%">Blah blah blah</td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-danger pull-right" style="width: 0%"></div> </div> </td>
+<td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 80%"></div> </div> </td>
+</tr>
+</table>
 ;T;@A:versioni

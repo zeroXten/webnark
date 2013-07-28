@@ -40,6 +40,7 @@
   background-color: #F8E0E0;
   padding: 10px;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
       li.bad {
@@ -54,15 +55,26 @@
       }
 
 .points {
-  font-weight: bold;
+}
+
+.summary {
+  border: 2px dashed #e0e0e0;
+  padding: 10px;
 }
 
 .summary-table {
-  border: 2px dashed #e0e0e0;
+  width: 100%;
 }
 
 .summary-table td {
-  padding: 10px 10px 0px 10px;
-  text-align: right;
   vertical-align: top;
+  width: 25%;
 }
+
+.summary-table td.left {
+  vertical-align: top;
+  padding: 0px 10px 0px 0px;
+  text-align: right;
+  width: 50%;
+}
+
