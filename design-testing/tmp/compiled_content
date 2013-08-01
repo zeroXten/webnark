@@ -7425,7 +7425,7 @@ button.close {
   }
 }
 ;T;	@;
-@I"/full_report/;T{;{	;I"¶J<!DOCTYPE html>
+@I"/full_report/;T{;{	;I"ˆJ<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7710,7 +7710,7 @@ button.close {
       <hr>
       <div class="footer">
        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
-       <p><a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a></p>
+       <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
       </div>
 
     </div> <!-- /container -->
@@ -8009,7 +8009,7 @@ I"=<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 
 <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></blockquote>
 
-;T:	post@I"/img/badge_circle_cross/;T{;{ I"#/img/flags/united_states_flag/;T{;{ I"%/img/glyphicons-halflings-white/;T{;{ I"/img/glyphicons-halflings/;T{;{ I"/img/tick_circle/;T{;{ I"/;T{;{	;I"‰<!DOCTYPE html>
+;T:	post@I"/img/badge_circle_cross/;T{;{ I"#/img/flags/united_states_flag/;T{;{ I"%/img/glyphicons-halflings-white/;T{;{ I"/img/glyphicons-halflings/;T{;{ I"/img/tick_circle/;T{;{ I"/;T{;{	;I"4<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -8107,7 +8107,7 @@ I"=<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
       <hr>
       <div class="footer">
        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
-       <p><a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a></p>
+       <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
       </div>
 
     </div> <!-- /container -->
@@ -11401,7 +11401,7 @@ I"µ<<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.<span class="muted"> - zeroXten 10 minutes ago</span></p>
 
-;T;@;I"/progress/;T{;{	;I"r<!DOCTYPE html>
+;T;@;I"/progress/;T{;{	;I"¬<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -11519,7 +11519,7 @@ I"µ<<h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
       <hr>
       <div class="footer">
        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
-       <p><a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a></p>
+       <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
       </div>
 
     </div> <!-- /container -->
@@ -11571,7 +11571,7 @@ I"‚<table style="width: 100%">
 <td style="width: 33%"> <div class="progress"> <div class="progress bar-success" style="width: 80%"></div> </div> </td>
 </tr>
 </table>
-;T;@AI""/img/Business-Money-bag-icon/;T{;{ I"/img/Buzz-Private-icon/;T{;{ I"/img/Buzz-Visible-icon/;T{;{ I"%/img/It-Infrastructure-Hdd-icon/;T{;{ I"0/img/It-Infrastructure-Remote-working-icon/;T{;{ I"$/img/Office-Stuff-Planner-icon/;T{;{ I"/img/Users-Talk-icon/;T{;{ I"/report/;T{;{	;I"f%<!DOCTYPE html>
+;T;@AI""/img/Business-Money-bag-icon/;T{;{ I"/img/Buzz-Private-icon/;T{;{ I"/img/Buzz-Visible-icon/;T{;{ I"%/img/It-Infrastructure-Hdd-icon/;T{;{ I"0/img/It-Infrastructure-Remote-working-icon/;T{;{ I"$/img/Office-Stuff-Planner-icon/;T{;{ I"/img/Users-Talk-icon/;T{;{ I"/report/;T{;{	;I"ç'<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -11701,24 +11701,31 @@ I"‚<table style="width: 100%">
 </div>
 
 
+<h3>Needs fixing</h3>
+
 <ul class="nav nav-list">
-  <li><i class="icon-remove"></i><span class="bad"> Provides only minimal details on cryptography and security implementations</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No zero-knowledge policy</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No two-factor support</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No federated authentication</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> Question/Answer used for password reset </span></li>
-  <li><i class="icon-remove"></i><span class="bad"> May provide your details to third parties</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> May use your details for marketing purposes</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> Defaults to weak TLS implemenation</span> </li>
-  <li><i class="icon-remove"></i><span class="bad"> No bug bounty programme</span></li>
-  <li><i class="icon-ok"></i><span class="good"> TLS used on whole site</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Non-restrictive EULA</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Cookies only over TLS</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Secure password storage</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Appropriate disclosure policy</span></li>
-  <li><i class="icon-ok"></i><span class="good"> No advertising</span></li>
-  <li><i class="icon-ok"></i><span class="good"> No known security incidents</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Does not support federated logins that allow you to login with centralised credentials such as Google or Facebook</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Uses fixed questions and user-provided answers for password resets</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Unknown whether or how encryption is used for storing data</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Indefinate storage of user data</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> No public disclosure policy that states how it handles vulnerability reports from security researchers</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> No bug bounty programm that encourages responsible disclosure of vulnerabilites and pays researchers for their efforts</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> May user personal data for marketing purposes</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> May pass on personal data to third parties</span> </li>
+  <li><i class="icon-remove"></i><span class="bad"> Has had a recently securit incident in while sensitive user data mwas made public by unauthorized third parties</span></li>
 </ul>
+
+<h3>A job well done</h3>
+
+<ul class="nav nav-list">
+  <li><i class="icon-ok"></i><span class="good"> Allows two-factor (e.g. SMS or mobile app)</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Stores account passwords securely</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Unrestricted password character set and/or length</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Small amount of personal or sensitive data is stored</span></li>
+  <li><i class="icon-ok"></i><span class="good"> All traffic to site is encrypted</span></li>
+  <li><i class="icon-ok"></i><span class="good"> SSL/TLS is rated as A by Qualsys SSLabs</span></li>
+</ul>
+
 
 <a class="btn btn-primary pull-right" href="/full_report/">Full Report</a>
 
@@ -11779,40 +11786,47 @@ I"‚<table style="width: 100%">
       <hr>
       <div class="footer">
        <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
-       <p><a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a></p>
+       <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
       </div>
 
     </div> <!-- /container -->
 
   </body>
 </html>
-;T;	I"Ö
+;T;	I"\
 <%= render 'report_header' %>
 
+<h3>Needs fixing</h3>
+
 <ul class="nav nav-list">
-  <li><i class="icon-remove"></i><span class="bad"> Provides only minimal details on cryptography and security implementations</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No zero-knowledge policy</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No two-factor support</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No federated authentication</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> Question/Answer used for password reset </span></li>
-  <li><i class="icon-remove"></i><span class="bad"> May provide your details to third parties</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> May use your details for marketing purposes</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> Defaults to weak TLS implemenation</span> </li>
-  <li><i class="icon-remove"></i><span class="bad"> No bug bounty programme</span></li>
-  <li><i class="icon-ok"></i><span class="good"> TLS used on whole site</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Non-restrictive EULA</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Cookies only over TLS</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Secure password storage</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Appropriate disclosure policy</span></li>
-  <li><i class="icon-ok"></i><span class="good"> No advertising</span></li>
-  <li><i class="icon-ok"></i><span class="good"> No known security incidents</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Does not support federated logins that allow you to login with centralised credentials such as Google or Facebook</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Uses fixed questions and user-provided answers for password resets</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Unknown whether or how encryption is used for storing data</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Indefinate storage of user data</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> No public disclosure policy that states how it handles vulnerability reports from security researchers</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> No bug bounty programm that encourages responsible disclosure of vulnerabilites and pays researchers for their efforts</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> May user personal data for marketing purposes</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> May pass on personal data to third parties</span> </li>
+  <li><i class="icon-remove"></i><span class="bad"> Has had a recently securit incident in while sensitive user data mwas made public by unauthorized third parties</span></li>
 </ul>
+
+<h3>A job well done</h3>
+
+<ul class="nav nav-list">
+  <li><i class="icon-ok"></i><span class="good"> Allows two-factor (e.g. SMS or mobile app)</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Stores account passwords securely</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Unrestricted password character set and/or length</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Small amount of personal or sensitive data is stored</span></li>
+  <li><i class="icon-ok"></i><span class="good"> All traffic to site is encrypted</span></li>
+  <li><i class="icon-ok"></i><span class="good"> SSL/TLS is rated as A by Qualsys SSLabs</span></li>
+</ul>
+
 
 <a class="btn btn-primary pull-right" href="/full_report/">Full Report</a>
 
 <%= render 'comments' %>
 ;T;
-I"÷
+I"≠
 <h2>Security report for <a href="#">DropBox</a> (cloud backup)</h2>
 <p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
 
@@ -11890,24 +11904,31 @@ I"÷
 </div>
 
 
+<h3>Needs fixing</h3>
+
 <ul class="nav nav-list">
-  <li><i class="icon-remove"></i><span class="bad"> Provides only minimal details on cryptography and security implementations</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No zero-knowledge policy</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No two-factor support</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> No federated authentication</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> Question/Answer used for password reset </span></li>
-  <li><i class="icon-remove"></i><span class="bad"> May provide your details to third parties</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> May use your details for marketing purposes</span></li>
-  <li><i class="icon-remove"></i><span class="bad"> Defaults to weak TLS implemenation</span> </li>
-  <li><i class="icon-remove"></i><span class="bad"> No bug bounty programme</span></li>
-  <li><i class="icon-ok"></i><span class="good"> TLS used on whole site</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Non-restrictive EULA</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Cookies only over TLS</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Secure password storage</span></li>
-  <li><i class="icon-ok"></i><span class="good"> Appropriate disclosure policy</span></li>
-  <li><i class="icon-ok"></i><span class="good"> No advertising</span></li>
-  <li><i class="icon-ok"></i><span class="good"> No known security incidents</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Does not support federated logins that allow you to login with centralised credentials such as Google or Facebook</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Uses fixed questions and user-provided answers for password resets</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Unknown whether or how encryption is used for storing data</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> Indefinate storage of user data</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> No public disclosure policy that states how it handles vulnerability reports from security researchers</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> No bug bounty programm that encourages responsible disclosure of vulnerabilites and pays researchers for their efforts</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> May user personal data for marketing purposes</span></li>
+  <li><i class="icon-remove"></i><span class="bad"> May pass on personal data to third parties</span> </li>
+  <li><i class="icon-remove"></i><span class="bad"> Has had a recently securit incident in while sensitive user data mwas made public by unauthorized third parties</span></li>
 </ul>
+
+<h3>A job well done</h3>
+
+<ul class="nav nav-list">
+  <li><i class="icon-ok"></i><span class="good"> Allows two-factor (e.g. SMS or mobile app)</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Stores account passwords securely</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Unrestricted password character set and/or length</span></li>
+  <li><i class="icon-ok"></i><span class="good"> Small amount of personal or sensitive data is stored</span></li>
+  <li><i class="icon-ok"></i><span class="good"> All traffic to site is encrypted</span></li>
+  <li><i class="icon-ok"></i><span class="good"> SSL/TLS is rated as A by Qualsys SSLabs</span></li>
+</ul>
+
 
 <a class="btn btn-primary pull-right" href="/full_report/">Full Report</a>
 
