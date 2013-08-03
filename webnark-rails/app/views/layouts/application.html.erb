@@ -36,47 +36,74 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">WebnarkRails</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+        <div class="container">
+          <a class="brand" href="#">Webnark</a>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
+    <div class="container">
+      <div class="row">
+
+        <div class="span9"> <!-- Main content -->
+
+          <!-- Search bar -->
+          <div class="input-append">
+            <input class="span8" id="appendedInputButton" type="text" placeholder="domain.com">
+            <button class="btn" type="button">Search</button>
+          </div>
+
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+
+        <div class="span3"> <!-- right side bar -->
+
+          <div class="title-block"><b>Hall of Fame</b></div>
+            <ul>
+              <li>google.com - 9/10</li>
+              <li>yahoo.com - 8/10</li>
+              <li>github.com - 8/10</li>
+              <li>twitter.com - 7/10</li>
+            </ul>
+          <br/>
+          <div class="title-block"><b>Hall of Shame</b></div>
+            <ul>
+              <li>microsoft.com - 3/10</li>
+              <li>facebook.com - 4/10</li>
+              <li>mysql.com - 4/10</li>
+              <li>ubuntu.com - 5/10</li>
+            </ul>
+
+          <br/>
+          <div class="title-block"><b>Recent sites</b></div>
+            <ul>
+              <li>microsoft.com - 3/10</li>
+              <li>facebook.com - 4/10</li>
+              <li>mysql.com - 4/10</li>
+              <li>ubuntu.com - 5/10</li>
+            </ul>
+
+          <br/>
+          <div class="title-block"><b>Trends</b></div>
+            <ul>
+              <li>Global index: 145 (+10)</li>
+              <li>Global average: 6/10</li>
+            </ul>
+          </div>
+
+        </div> <!-- right side bar -->
+
+        <hr>
+        <div class="footer">
+         <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
+         <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
+        </div>
+
       </div><!--/row-->
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
 
     </div> <!-- /container -->
 
