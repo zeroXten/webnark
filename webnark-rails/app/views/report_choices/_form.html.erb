@@ -1,37 +1,38 @@
-<%= form_for(@report_choice) do |f| %>
-  <% if @report_choice.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@report_choice.errors.count, "error") %> prohibited this report_choice from being saved:</h2>
-
-      <ul>
-      <% @report_choice.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @report_choice, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :report_item_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :report_item_id, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :bonus, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bonus, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :points, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :points, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :help, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :help, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :report_item_id %><br>
-    <%= f.number_field :report_item_id %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :bonus %><br>
-    <%= f.check_box :bonus %>
-  </div>
-  <div class="field">
-    <%= f.label :points %><br>
-    <%= f.number_field :points %>
-  </div>
-  <div class="field">
-    <%= f.label :help %><br>
-    <%= f.text_area :help %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                report_choices_path, :class => 'btn' %>
   </div>
 <% end %>

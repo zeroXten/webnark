@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = ReportItem -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Report category:</strong>
-  <%= @report_item.report_category_id %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:report_category_id) %>:</strong></dt>
+  <dd><%= @report_item.report_category_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @report_item.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @report_item.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:help) %>:</strong></dt>
+  <dd><%= @report_item.help %></dd>
+</dl>
 
-<p>
-  <strong>Name:</strong>
-  <%= @report_item.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @report_item.description %>
-</p>
-
-<p>
-  <strong>Help:</strong>
-  <%= @report_item.help %>
-</p>
-
-<%= link_to 'Edit', edit_report_item_path(@report_item) %> |
-<%= link_to 'Back', report_items_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              report_items_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_report_item_path(@report_item), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              report_item_path(@report_item),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
