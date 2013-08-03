@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  report_item_id: 1
+  name: MyString
+  bonus: false
+  points: 1
+  help: MyText
+
+two:
+  report_item_id: 1
+  name: MyString
+  bonus: false
+  points: 1
+  help: MyText

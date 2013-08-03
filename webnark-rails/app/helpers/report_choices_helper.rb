@@ -1,0 +1,2 @@
+module ReportChoicesHelper
+end

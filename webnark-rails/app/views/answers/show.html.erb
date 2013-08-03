@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @answer.service_id %>
+</p>
+
+<p>
+  <strong>Report choice:</strong>
+  <%= @answer.report_choice_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @answer.notes %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

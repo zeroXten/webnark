@@ -1,4 +1,14 @@
 WebnarkRails::Application.routes.draw do
+  resources :answers
+
+  resources :report_choices
+
+  resources :report_items
+
+  resources :report_categories
+
+  resources :services
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

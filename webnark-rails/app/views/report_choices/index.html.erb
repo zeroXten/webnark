@@ -1,0 +1,35 @@
+<h1>Listing report_choices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Report item</th>
+      <th>Name</th>
+      <th>Bonus</th>
+      <th>Points</th>
+      <th>Help</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_choices.each do |report_choice| %>
+      <tr>
+        <td><%= report_choice.report_item_id %></td>
+        <td><%= report_choice.name %></td>
+        <td><%= report_choice.bonus %></td>
+        <td><%= report_choice.points %></td>
+        <td><%= report_choice.help %></td>
+        <td><%= link_to 'Show', report_choice %></td>
+        <td><%= link_to 'Edit', edit_report_choice_path(report_choice) %></td>
+        <td><%= link_to 'Destroy', report_choice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report choice', new_report_choice_path %>

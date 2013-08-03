@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Report category:</strong>
+  <%= @report_item.report_category_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @report_item.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @report_item.description %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @report_item.help %>
+</p>
+
+<%= link_to 'Edit', edit_report_item_path(@report_item) %> |
+<%= link_to 'Back', report_items_path %>

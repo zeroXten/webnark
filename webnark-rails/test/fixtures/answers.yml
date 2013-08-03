@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  service_id: 1
+  report_choice_id: 1
+  notes: MyText
+
+two:
+  service_id: 1
+  report_choice_id: 1
+  notes: MyText

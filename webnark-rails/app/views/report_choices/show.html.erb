@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Report item:</strong>
+  <%= @report_choice.report_item_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @report_choice.name %>
+</p>
+
+<p>
+  <strong>Bonus:</strong>
+  <%= @report_choice.bonus %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @report_choice.points %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @report_choice.help %>
+</p>
+
+<%= link_to 'Edit', edit_report_choice_path(@report_choice) %> |
+<%= link_to 'Back', report_choices_path %>

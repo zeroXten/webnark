@@ -1,0 +1,2 @@
+module ReportCategoriesHelper
+end
