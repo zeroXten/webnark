@@ -9,6 +9,9 @@ WebnarkRails::Application.routes.draw do
 
   resources :services
 
+  get '/search/:query', to: 'services#search'
+  get '/search', to: 'services#search'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

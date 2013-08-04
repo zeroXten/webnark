@@ -7,6 +7,11 @@ class ServicesController < ApplicationController
     @services = Service.all
   end
 
+  def search
+    @services = Service.where("name LIKE ? OR url LIKE ?", "%#{params[:query]}%")
+    render :index
+  end
+
   # GET /services/1
   # GET /services/1.json
   def show

@@ -51,8 +51,10 @@
 
           <!-- Search bar -->
           <div class="input-append">
-            <input class="span8" id="appendedInputButton" type="text" placeholder="domain.com">
-            <button class="btn" type="button">Search</button>
+            <%= form_tag("/search", method: "get") do %>
+              <input class="span8" id="appendedInputButton" type="text" name="query" placeholder="domain, name or tag">
+              <button class="btn" type="submit">Search</button>
+            <% end %>
           </div>
 
           <%= bootstrap_flash %>
