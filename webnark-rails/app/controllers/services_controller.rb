@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :edit, :update, :destroy]
+  before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
 
   # GET /services
   # GET /services.json
@@ -8,13 +8,42 @@ class ServicesController < ApplicationController
   end
 
   def search
-    @services = Service.where("name LIKE ? OR url LIKE ?", "%#{params[:query]}%")
+    @services = Service.where("name LIKE ? OR url LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
     render :index
   end
 
   # GET /services/1
   # GET /services/1.json
   def show
+    @good = []
+    @bad = []
+    @service.answers.each do |answer|
+      if answer.report_choice.points > 0
+        @good << answer.report_choice
+      else
+        @bad << answer.report_choice
+      end
+    end
+  end
+
+  # GET /services/1/full
+  def full
+    @full_report = true; 
+
+    @report_categories = {}
+    @answers = {}
+
+    @service.answers.each do |answer|
+      rc = answer.report_choice.report_item.report_category
+      @report_categories[rc.name] = rc
+
+      if not @answers.has_key? rc.name
+        @answers[rc.name] = []
+      end
+      @answers[rc.name] << answer
+    end
+
+    render :show
   end
 
   # GET /services/new

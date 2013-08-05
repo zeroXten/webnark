@@ -9,8 +9,12 @@ WebnarkRails::Application.routes.draw do
 
   resources :services
 
+  root :to => 'high_voltage/pages#show', id: 'home'
+
   get '/search/:query', to: 'services#search'
   get '/search', to: 'services#search'
+
+  get '/services/:id/full', to: 'services#full', as: :full_report
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

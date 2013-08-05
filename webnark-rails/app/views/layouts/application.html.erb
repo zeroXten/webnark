@@ -39,72 +39,22 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Webnark</a>
+          <a class="brand" href="/">Webnark</a>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
 
-        <div class="span9"> <!-- Main content -->
-
-          <!-- Search bar -->
-          <div class="input-append">
-            <%= form_tag("/search", method: "get") do %>
-              <input class="span8" id="appendedInputButton" type="text" name="query" placeholder="domain, name or tag">
-              <button class="btn" type="submit">Search</button>
-            <% end %>
-          </div>
 
           <%= bootstrap_flash %>
           <%= yield %>
-        </div>
 
-        <div class="span3"> <!-- right side bar -->
-
-          <div class="title-block"><b>Hall of Fame</b></div>
-            <ul>
-              <li>google.com - 9/10</li>
-              <li>yahoo.com - 8/10</li>
-              <li>github.com - 8/10</li>
-              <li>twitter.com - 7/10</li>
-            </ul>
-          <br/>
-          <div class="title-block"><b>Hall of Shame</b></div>
-            <ul>
-              <li>microsoft.com - 3/10</li>
-              <li>facebook.com - 4/10</li>
-              <li>mysql.com - 4/10</li>
-              <li>ubuntu.com - 5/10</li>
-            </ul>
-
-          <br/>
-          <div class="title-block"><b>Recent sites</b></div>
-            <ul>
-              <li>microsoft.com - 3/10</li>
-              <li>facebook.com - 4/10</li>
-              <li>mysql.com - 4/10</li>
-              <li>ubuntu.com - 5/10</li>
-            </ul>
-
-          <br/>
-          <div class="title-block"><b>Trends</b></div>
-            <ul>
-              <li>Global index: 145 (+10)</li>
-              <li>Global average: 6/10</li>
-            </ul>
-          </div>
-
-        </div> <!-- right side bar -->
-
-        <hr>
-        <div class="footer">
+        <hr/>
+        <div class="footer text-center">
          <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
          <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
         </div>
-
-      </div><!--/row-->
 
 
     </div> <!-- /container -->

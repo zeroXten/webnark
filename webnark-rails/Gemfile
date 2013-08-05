@@ -46,3 +46,6 @@ end
 
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+
+# Static pages
+gem 'high_voltage'

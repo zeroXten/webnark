@@ -1,0 +1,18 @@
+<h3>Needs improvement</h3>
+<ul class="nav nav-list">
+
+<% @bad.each do |answer| %>
+  <li><i class="icon-remove"></i><span class="text-error"> <%= answer.name %></span></li>
+<% end %>
+</ul>
+<h3>Job well done </h3>
+
+<ul class="nav nav-list">
+<% @good.each do |answer| %>
+  <li><i class="icon-ok"></i><span class="text-success"> <%= answer.name %></span></li>
+<% end %>
+</ul>
+
+<div class="text-right">
+  <%= link_to 'Full Report', full_report_url(id: @service.id), :class => "btn btn-primary" %>
+</div>

@@ -1,24 +1,11 @@
 <%- model_class = Service -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @service.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @service.description %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
-  <dd><%= @service.url %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:slug) %>:</strong></dt>
-  <dd><%= @service.slug %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:hosting_provider) %>:</strong></dt>
-  <dd><%= @service.hosting_provider %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:country) %>:</strong></dt>
-  <dd><%= @service.country %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:screenshot_url) %>:</strong></dt>
-  <dd><%= @service.screenshot_url %></dd>
-</dl>
+<%= render 'shared/search' %>
+<%= render 'header' %>
+<% if @full_report %>
+  <%= render 'full_report' %>
+<% else %>
+  <%= render 'summary_report' %>
+<% end %>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

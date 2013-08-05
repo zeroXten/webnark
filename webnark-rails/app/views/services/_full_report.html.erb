@@ -1,0 +1,12 @@
+<% @report_categories.sort.map do |name, category| %>
+<div><h3><%= name %></h3></div>
+<blockquote><%= category.description %></blockquote>
+
+<% @answers[name].each do |answer| %>
+ <% c = answer.report_choice.points >= 0 ? "text-success" : "text-error" %>
+ <p class="<%= c %>"><%= answer.report_choice.name %></p>
+ <p><%= answer.report_choice.report_item.description %></p>
+ <blockquote><%= answer.notes %></blockquote>
+<% end %>
+
+<% end %>

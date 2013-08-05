@@ -1,0 +1,12 @@
+<!-- Search bar -->
+<div class="text-center">
+  <%= form_tag("/search", method: "get", :class => "form-search") do %>
+    <div class="input-append">
+       <input type="text" class="search-query input-xxlarge edit-btn-large" name="query" placeholder="domain, name or tag">
+         <button type="submit" class="btn btn-large">
+            <i class="icon-search"></i>
+            Search
+        </button>
+     </div>
+  <% end %>
+</div>
