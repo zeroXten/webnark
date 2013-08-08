@@ -1,20 +1,36 @@
 <%- model_class = Service -%>
 <%= render 'shared/search' %>
-<%= render 'header' %>
-<% if @full_report %>
-  <%= render 'full_report' %>
-<% else %>
-  <%= render 'summary_report' %>
-<% end %>
 
-<div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              services_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_service_path(@service), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              service_path(@service),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+<h1>Security report for <%= link_to @service.name, @service.url %></h1>
+<p class="muted">Last updated <%= @service.updated_at %> by zeroXten</p>
+
+<div class="row">
+<div class="span9">
+  <%= render 'header' %>
+  <% if @full_report %>
+    <%= render 'full_report' %>
+  <% else %>
+    <%= render 'summary_report' %>
+  <% end %>
+
+  <div class="form-actions">
+    <%= link_to t('.back', :default => t("helpers.links.back")),
+                services_path, :class => 'btn'  %>
+    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                edit_service_path(@service), :class => 'btn' %>
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                service_path(@service),
+                :method => 'delete',
+                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                :class => 'btn btn-danger' %>
+  </div>
 </div>
+<div class="span3">
+  <%= render 'score' %>
+  <%= render 'shared/community_link' %>
+</div>
+</div>
+
+<%= @service_scores %>
+<br/>
+<%= @category_scores %>

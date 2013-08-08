@@ -1,11 +1,13 @@
-<% @report_categories.sort.map do |name, category| %>
-<div><h3><%= name %></h3></div>
-<blockquote><%= category.description %></blockquote>
+<% @categories.sort.map do |name, category| %>
+<% c = @service_scores[name]["total"] >= 0 ? "good-block" : "bad-block" %>
+<div class="block <%= c %>"><%= image_tag("/assets/"+category.icon_url) %> <%= name %></div>
+<p><%= category.description %></p>
 
 <% @answers[name].each do |answer| %>
+ <hr/>
  <% c = answer.report_choice.points >= 0 ? "text-success" : "text-error" %>
- <p class="<%= c %>"><%= answer.report_choice.name %></p>
- <p><%= answer.report_choice.report_item.description %></p>
+ <p class="<%= c %>"><%= answer.report_choice.name %> <span class="pull-right"><%= answer.report_choice.points %> points</span></p>
+ <p><%= answer.report_choice.description %></p>
  <blockquote><%= answer.notes %></blockquote>
 <% end %>
 

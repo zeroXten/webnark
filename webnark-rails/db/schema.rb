@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803205553) do
+ActiveRecord::Schema.define(version: 20130807161808) do
 
   create_table "answers", force: true do |t|
     t.integer  "service_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20130803205553) do
     t.string   "name"
     t.boolean  "bonus"
     t.integer  "points"
+    t.text     "description"
     t.text     "help"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -42,7 +43,6 @@ ActiveRecord::Schema.define(version: 20130803205553) do
   create_table "report_items", force: true do |t|
     t.integer  "report_category_id"
     t.string   "name"
-    t.text     "description"
     t.text     "help"
     t.datetime "created_at"
     t.datetime "updated_at"

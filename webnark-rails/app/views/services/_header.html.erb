@@ -1,17 +1,29 @@
-<%- model_class = Service -%>
-<h1>Security report for <%= link_to @service.name, @service.url %></h1>
-<p class="muted">Last updated 2013-07-03 11:55 by zeroXten</p>
+<div class="summary">
+<table class="summary-table">
 
-<div class="row">
-  <div class="span9">
-    <%= render 'summary' %>
-    <br/>
-    <p><%= @service.description %></p>
-    <br/>
-  </div>
+<% @categories.sort.map do |name, category| %>
+<%
+  score = @service_scores[name]["good"] - @service_scores[name]["bad"]
+  if score < 0
+    good_width = 0
+    bad_width = -1 * 100 * score / @category_scores[name]["bad"]
+  else
+    good_width = 100 * score / @category_scores[name]["good"]
+    bad_width = 0
+  end
+%>
 
-  <div class="span3">
-    <%= render 'score' %>
-  </div>
+<tr>
+  <td class="left"><%= name %></td>
+  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: <%= bad_width %>%"></div><div class="progress"></td>
+  <td><div class="progress"> <div class="progress bar-success" style="width: <%= good_width %>%"></div><div class="progress"></td>
+</tr>
+<% end %>
+
+</table>
 </div>
+
+<br/>
+<p><%= @service.description %></p>
+<br/>
 

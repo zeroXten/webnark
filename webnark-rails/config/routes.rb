@@ -16,6 +16,8 @@ WebnarkRails::Application.routes.draw do
 
   get '/services/:id/full', to: 'services#full', as: :full_report
 
+  get '/community', to: 'community#index', as: :community
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

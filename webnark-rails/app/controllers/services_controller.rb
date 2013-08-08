@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
+  before_action :calculate_score, only: [:show, :index, :full]
 
   # GET /services
   # GET /services.json
@@ -30,17 +31,15 @@ class ServicesController < ApplicationController
   def full
     @full_report = true; 
 
-    @report_categories = {}
     @answers = {}
 
     @service.answers.each do |answer|
-      rc = answer.report_choice.report_item.report_category
-      @report_categories[rc.name] = rc
+      category = answer.report_choice.report_item.report_category
 
-      if not @answers.has_key? rc.name
-        @answers[rc.name] = []
+      if not @answers.has_key? category.name
+        @answers[category.name] = []
       end
-      @answers[rc.name] << answer
+      @answers[category.name] << answer
     end
 
     render :show
@@ -104,5 +103,45 @@ class ServicesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
       params.require(:service).permit(:name, :description, :url, :slug, :hosting_provider, :country, :screenshot_url)
+    end
+
+    def set_score(hash, key, points)
+      if not hash.has_key? key
+        hash[key] = { "good" => 0, "bad" => 0, "total" => 0, "min" => 0, "max" => 0}
+      end
+
+      if points < 0
+        hash[key]["bad"] += -1 * points
+        hash[key]["min"] = points if points < hash[key]["min"] 
+      elsif points > 0
+        hash[key]["good"] += points
+        hash[key]["max"] = points if points > hash[key]["max"]
+      end
+      hash[key]["total"] += points
+    end
+
+    def calculate_score
+      @service_scores = {}
+      @category_scores = {}
+      @categories = {}
+
+      categories = []
+      @service.answers.each do |answer|
+        category = answer.report_choice.report_item.report_category
+        if not @categories.has_key? category.name
+          @categories[category.name] = category
+        end
+
+        set_score(@service_scores, category.name, answer.report_choice.points)
+      end
+
+      @categories.each_pair do |name, category|
+        category.report_items.each do |item|
+          item.report_choices.each do |choice|
+            set_score(@category_scores, name, choice.points)
+          end        
+        end
+      end
+      
     end
 end

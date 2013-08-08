@@ -69,6 +69,6 @@ class ReportChoicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_choice_params
-      params.require(:report_choice).permit(:report_item_id, :name, :bonus, :points, :help)
+      params.require(:report_choice).permit(:report_item_id, :name, :bonus, :points, :description, :help)
     end
 end
