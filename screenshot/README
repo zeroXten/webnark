@@ -1,0 +1,15 @@
+Because, when you screenshot websites, you usually deal with untrusted content
+and a huge engine that parses it, the attack surface is relatively big.
+Therefore, you should isolate it from sensitive parts of your webapp. At least
+run it in another user context, and ideally add some selinux or so to lock it
+down.
+
+To make all this stuff work, set the path to the phantomjs binary correctly in
+make_screenshot.sh.
+
+TO create a screenshot, just call "./make_screenshot.sh <url>" (from an isolated
+user or so) and grab the image from stdout.
+
+This script is designed around the idea that the permission level of the
+screenshot thing is exclusively lower than that of the webapp, so if the webapp
+can compromise the screenshot account, that's not an issue.
