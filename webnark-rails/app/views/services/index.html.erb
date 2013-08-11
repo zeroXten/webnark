@@ -1,47 +1,26 @@
 <%- model_class = Service -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:url) %></th>
-      <th><%= model_class.human_attribute_name(:slug) %></th>
-      <th><%= model_class.human_attribute_name(:hosting_provider) %></th>
-      <th><%= model_class.human_attribute_name(:country) %></th>
-      <th><%= model_class.human_attribute_name(:screenshot_url) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @services.each do |service| %>
-      <tr>
-        <td><%= link_to service.id, service_path(service) %></td>
-        <td><%= service.name %></td>
-        <td><%= service.description %></td>
-        <td><%= service.url %></td>
-        <td><%= service.slug %></td>
-        <td><%= service.hosting_provider %></td>
-        <td><%= service.country %></td>
-        <td><%= service.screenshot_url %></td>
-        <td><%=l service.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_service_path(service), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      service_path(service),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @services.each do |service| %>
+  <% c = service.score >= 0.5 ? "good-block" : "bad-block" %>
+  <div class="row">
+    <div class="span2 text-center">
+      <div class="block <%= c %>">
+        <h2><%= (10 * service.score).round %>/10</h2>
+      </div>
+      <p><%- if service.country %>
+Hosted in <%= image_tag("flags/#{service.country.downcase}.png") %>
+<% end %>
+<%- if service.hosting_provider %>
+ by <%= service.hosting_provider %>
+<% end %></p>
+    </div>
+    <div class="span9">
+      <h2><%= link_to service.name, service_path(service) %></h2>
+      <p class="muted">Last updated by zeroXten <%= service.updated_at %></p>
+      <p><%= service.description %></p>
+    </div>
+  </div>
+    <hr/>
+<% end %>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_service_path,

@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
-  before_action :calculate_score, only: [:show, :index, :full]
+  before_action :calculate_score, only: [:show, :full]
 
   # GET /services
   # GET /services.json
@@ -121,6 +121,8 @@ class ServicesController < ApplicationController
     end
 
     def calculate_score
+
+
       @service_scores = {}
       @category_scores = {}
       @categories = {}
@@ -142,6 +144,21 @@ class ServicesController < ApplicationController
           end        
         end
       end
-      
+
+      score = 0
+      total = 0
+      @service_scores.each_pair do |category, service_score|
+        adjustment = @category_scores[category]["min"] * -1
+        score += service_score["total"] + adjustment
+        total += @category_scores[category]["max"] + adjustment
+      end
+
+      # Check whether the score has already been set recent
+      if not @service.score or @service.score_updated_at > 1.day.ago
+        @service.score = score.to_f / total.to_f
+        @service.score_updated_at = Time.now
+        @service.save
+      end
+
     end
 end
