@@ -1,19 +1,16 @@
 <%- model_class = Service -%>
 <%
-  score = 0
-  total = 0
-  @service_scores.each_pair do |category, service_score|
-    adjustment = @category_scores[category]["min"] * -1
-    score += service_score["total"] + adjustment
-    total += @category_scores[category]["max"] + adjustment
-  end
-  score = (10 * score / total).to_i
-  c = score > 5 ? "good-block" : "bad-block"
+  c = @service.score >= 0.5 ? "good-block" : "bad-block"
 %>
 <div class="text-center">
-<div class="block <%= c %> score"><%= score %>/10</div>
+<div class="block <%= c %> score"><%= (10 * @service.score).round %>/10</div>
 <br/>
 <img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
 <br/>
-<p>Hosted in <%= @service.country.upcase %> by <%= @service.hosting_provider %></p>
+<p><%- if @service.country %>
+Hosted in <%= image_tag "flags/#{@service.country.downcase}.png" %> 
+<% end %>
+<%- if @service.hosting_provider %>
+by <%= @service.hosting_provider %>
+<% end %></p>
 </div>

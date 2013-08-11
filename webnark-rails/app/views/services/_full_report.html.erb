@@ -1,6 +1,6 @@
 <% @categories.sort.map do |name, category| %>
 <% c = @service_scores[name]["total"] >= 0 ? "good-block" : "bad-block" %>
-<div class="block <%= c %>"><%= image_tag("/assets/"+category.icon_url) %> <%= name %></div>
+<div class="block <%= c %>"><%= image_tag(category.icon_url) %> <%= name %></div>
 <p><%= category.description %></p>
 
 <% @answers[name].each do |answer| %>
