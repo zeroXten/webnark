@@ -171,7 +171,10 @@ services = []
   service = Service.create(
     name: "Test service #{i}",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a",
-    country: "us"
+    country: "us",
+    hosting_provider: "Badger Inc",
+    score: 0.0,
+    score_updated_at: Time.at(0)
   )
   services << service
 end

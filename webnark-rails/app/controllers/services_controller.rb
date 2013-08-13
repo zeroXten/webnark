@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
   before_action :calculate_score, only: [:show, :full]
+  after_action :calculate_score, only: [:create, :update]
 
   # GET /services
   # GET /services.json
@@ -52,6 +53,7 @@ class ServicesController < ApplicationController
 
   # GET /services/1/edit
   def edit
+    @report_categories = ReportCategory.all
   end
 
   # POST /services
@@ -73,6 +75,14 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
+    #params[:service][:answers_attributes].delete_if { |k,v| v.has_key?(:notes) and v[:notes].empty? and v.has_key?(:id) }
+    params[:service][:answers_attributes].each_pair do |k,v|
+      params[:service][:answers_attributes][k]["_destroy"] = true if v.has_key?(:id) and v.has_key?(:notes) and v[:notes].empty?
+    end
+    logger.info "XXXXXXXXXX"
+    logger.info params
+    logger.info "YYYYYYYYYY"
+
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to @service, notice: 'Service was successfully updated.' }
@@ -100,11 +110,6 @@ class ServicesController < ApplicationController
       @service = Service.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def service_params
-      params.require(:service).permit(:name, :description, :url, :slug, :hosting_provider, :country, :screenshot_url)
-    end
-
     def set_score(hash, key, points)
       if not hash.has_key? key
         hash[key] = { "good" => 0, "bad" => 0, "total" => 0, "min" => 0, "max" => 0}
@@ -121,7 +126,6 @@ class ServicesController < ApplicationController
     end
 
     def calculate_score
-
 
       @service_scores = {}
       @category_scores = {}
@@ -154,11 +158,27 @@ class ServicesController < ApplicationController
       end
 
       # Check whether the score has already been set recent
-      if not @service.score or @service.score_updated_at > 1.day.ago
-        @service.score = score.to_f / total.to_f
+      #if not @service.score or @service.score_updated_at < 1.day.ago
+      score = score.to_f / total.to_f
+      if @service.score != score
+        @service.score = score
         @service.score_updated_at = Time.now
         @service.save
       end
 
+    end
+    
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def service_params
+      params.require(:service).permit(
+        :name, 
+        :description, 
+        :url, 
+        :slug, 
+        :hosting_provider, 
+        :country, 
+        :screenshot_url,
+        :answers_attributes => [:id, :service_id, :notes, :report_choice_id, '_destroy']
+      )
     end
 end
