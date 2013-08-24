@@ -49,8 +49,23 @@
       <% item.report_choices.each do |choice| %>
         <% c = choice.points >= 0 ? "text-success" : "text-error" %>
         <%= f.fields_for :answers, choice.answers.find_or_initialize_by(service: @service) do |a| %>
-          <h5 class="<%= c %>"><%= choice.name %> <span class="pull-right"><%= choice.points %> points</span></h5>
-          <%= a.text_area :notes, :class => "field span8", :rows => "5" %>
+          <div class="row">
+            <div class="span1">
+              <span class="pull-right"><%= a.check_box :id %></span>
+            </div>
+            <div class="span5">
+              <strong class="<%= c %>"><%= choice.name %></strong>
+            </div>
+            <div class="span2">
+              <strong class="<%= c %> pull-right"><%= choice.points %> points</strong>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span7 offset1">
+              <%= a.text_area :notes, :class => "field span7", :rows => "1", :placeholder => "Optional notes"%>
+            </div>
+          </div>
+          <br/>
           <%= a.hidden_field :service_id, :value => @service.id %>
           <%= a.hidden_field :report_choice_id, :value => choice.id %>
         <% end %>

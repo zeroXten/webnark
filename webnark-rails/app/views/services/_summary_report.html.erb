@@ -12,6 +12,9 @@
   <li><i class="icon-ok"></i><span class="text-success"> <%= answer.name %></span></li>
 <% end %>
 </ul>
+<%= @service_scores %>
+<br/><br/>
+<%= @category_scores %>
 
 <div class="text-right">
   <%= link_to 'Full Report', full_report_url(id: @service.id), :class => "btn btn-primary" %>
