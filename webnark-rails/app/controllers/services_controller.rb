@@ -75,14 +75,6 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
-    #params[:service][:answers_attributes].delete_if { |k,v| v.has_key?(:notes) and v[:notes].empty? and v.has_key?(:id) }
-    params[:service][:answers_attributes].each_pair do |k,v|
-      params[:service][:answers_attributes][k]["_destroy"] = true if v.has_key?(:id) and v.has_key?(:notes) and v[:notes].empty?
-    end
-    logger.info "XXXXXXXXXX"
-    logger.info params
-    logger.info "YYYYYYYYYY"
-
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to @service, notice: 'Service was successfully updated.' }
@@ -159,7 +151,11 @@ class ServicesController < ApplicationController
 
       # Check whether the score has already been set recent
       #if not @service.score or @service.score_updated_at < 1.day.ago
-      score = score.to_f / total.to_f
+      if total == 0
+        score = 0
+      else
+        score = score.to_f / total.to_f
+      end
       if @service.score != score
         @service.score = score
         @service.score_updated_at = Time.now
@@ -167,9 +163,21 @@ class ServicesController < ApplicationController
       end
 
     end
-    
+ 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
+      params[:service][:answers_attributes].each_pair do |k,v|
+        # Need to filter non-selected answers
+        if v[:selected].to_s == "0"
+          if not v[:id] or v[:id].empty?
+            # No id, so ignore
+            params[:service][:answers_attributes].delete(k)
+          else
+            # id exists, so destroy
+            params[:service][:answers_attributes][k]["_destroy"] = 1
+          end
+        end
+      end
       params.require(:service).permit(
         :name, 
         :description, 
@@ -178,7 +186,7 @@ class ServicesController < ApplicationController
         :hosting_provider, 
         :country, 
         :screenshot_url,
-        :answers_attributes => [:id, :service_id, :notes, :report_choice_id, '_destroy']
+        :answers_attributes => [:id, :service_id, :notes, :report_choice_id, :selected, '_destroy']
       )
     end
 end

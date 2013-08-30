@@ -49,3 +49,5 @@ gem "twitter-bootstrap-rails"
 
 # Static pages
 gem 'high_voltage'
+
+gem 'hirb'

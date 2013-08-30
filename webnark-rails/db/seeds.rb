@@ -186,6 +186,7 @@ services.each do |service|
     Answer.create(
       service_id: service.id,
       report_choice_id: choice.id,
+      selected: true,
       notes: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a"
     )
   end
