@@ -51,7 +51,7 @@
         <%= f.fields_for :answers, choice.answers.find_or_initialize_by(service: @service) do |a| %>
           <div class="row">
             <div class="span1">
-              <span class="pull-right"><%= a.check_box :id %></span>
+              <span class="pull-right"><%= a.check_box :selected %></span>
             </div>
             <div class="span5">
               <strong class="<%= c %>"><%= choice.name %></strong>
