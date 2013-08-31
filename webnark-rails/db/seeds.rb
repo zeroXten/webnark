@@ -1,6 +1,6 @@
 report_categories = ReportCategory.create([
   {
-    name: 'Authentication & Session Management', 
+    name: 'Authentication', 
     description: 'Authentication is proving you are who you say you are and session management is the process of maintaining that trust once established. Most website and services require you to register your details and then log in to use the service, often using a username and password.',
     icon_url: 'icons/Buzz-Private-icon.png' 
   },

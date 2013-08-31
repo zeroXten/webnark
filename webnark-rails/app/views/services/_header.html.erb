@@ -1,17 +1,21 @@
 <div class="summary">
 <table class="summary-table">
-
-<% @categories.sort.map do |name, category| %>
-<%
-  bad_width = 100 * @service_scores[name][:bad] / @category_scores[name][:min]
-  good_width = 100 * @service_scores[name][:good] / @category_scores[name][:max]
-%>
-
 <tr>
-  <td class="left"><%= name %></td>
-  <td><div class="progress"><div class="progress bar-danger pull-right" style="width: <%= bad_width %>%"></div><div class="progress"></td>
-  <td><div class="progress"> <div class="progress bar-success" style="width: <%= good_width %>%"></div><div class="progress"></td>
+  <th></th>
+  <th>% negative scoring</th>
+  <th>% positive scoring</th>
 </tr>
+<% @categories.sort.map do |name, category| %>
+  <%
+    bad_width = 100 * @service_scores[name][:bad] / @category_scores[name][:min]
+    good_width = 100 * @service_scores[name][:good] / @category_scores[name][:max]
+  %>
+
+  <tr>
+    <td class="left"><%= name %></td>
+    <td><div class="progress"><div class="progress bar-danger pull-right" style="width: <%= bad_width %>%"></div><div class="progress"></td>
+    <td><div class="progress"> <div class="progress bar-success" style="width: <%= good_width %>%"></div><div class="progress"></td>
+  </tr>
 <% end %>
 
 </table>

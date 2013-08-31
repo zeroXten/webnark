@@ -46,7 +46,7 @@
     <h3><%= category.name %></h3>
     <% category.report_items.each do |item| %>
       <h4><%= item.name %></h4>
-      <% item.report_choices.each do |choice| %>
+      <% item.report_choices.all(:order => "bonus, points").each do |choice| %>
         <% c = choice.points >= 0 ? "text-success" : "text-error" %>
         <%= f.fields_for :answers, choice.answers.find_or_initialize_by(service: @service) do |a| %>
           <div class="row">
