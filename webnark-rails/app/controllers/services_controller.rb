@@ -102,51 +102,71 @@ class ServicesController < ApplicationController
       @service = Service.find(params[:id])
     end
 
-    def set_score(hash, key, points)
-      if not hash.has_key? key
-        hash[key] = { "good" => 0, "bad" => 0, "total" => 0, "min" => 0, "max" => 0}
-      end
-
-      if points < 0
-        hash[key]["bad"] += -1 * points
-        hash[key]["min"] = points if points < hash[key]["min"] 
-      elsif points > 0
-        hash[key]["good"] += points
-        hash[key]["max"] = points if points > hash[key]["max"]
-      end
-      hash[key]["total"] += points
-    end
-
     def calculate_score
 
-      @service_scores = {}
-      @category_scores = {}
       @categories = {}
+      @category_scores = {}
+      @service_scores = {}
 
-      categories = []
       @service.answers.each do |answer|
         category = answer.report_choice.report_item.report_category
         if not @categories.has_key? category.name
           @categories[category.name] = category
         end
-
-        set_score(@service_scores, category.name, answer.report_choice.points)
       end
 
       @categories.each_pair do |name, category|
+
+        @category_scores[name] = { :items => {}, :min => 0, :max => 0 }
+
         category.report_items.each do |item|
+
+          @category_scores[name][:items][item.name] = { :min => 0, :max => 0, :bonus_min => 0, :bonus_max => 0 }
+          
           item.report_choices.each do |choice|
-            set_score(@category_scores, name, choice.points)
-          end        
+            if choice.bonus
+              if choice.points >= 0
+                @category_scores[name][:items][item.name][:bonus_max] += choice.points
+              else
+                @category_scores[name][:items][item.name][:bonus_min] += choice.points
+              end
+            else
+              if choice.points >= 0
+                @category_scores[name][:items][item.name][:max] = [choice.points, @category_scores[name][:items][item.name][:max]].max
+              else
+                @category_scores[name][:items][item.name][:min] = [choice.points, @category_scores[name][:items][item.name][:min]].min
+              end
+            end
+          end
+
+          @category_scores[name][:min] += @category_scores[name][:items][item.name][:min] + @category_scores[name][:items][item.name][:bonus_min]
+          @category_scores[name][:max] += @category_scores[name][:items][item.name][:max] + @category_scores[name][:items][item.name][:bonus_max]
+
+        end
+      end
+
+      @service.answers.each do |answer|
+        category = answer.report_choice.report_item.report_category
+        points = answer.report_choice.points
+
+        if not @service_scores.has_key? category.name
+          @service_scores[category.name] = { :score => 0, :bad => 0, :good => 0 }
+        end
+
+        @service_scores[category.name][:score] += points
+        if points > 0
+          @service_scores[category.name][:good] += points
+        else
+          @service_scores[category.name][:bad] += points
         end
       end
 
       score = 0
       total = 0
       @service_scores.each_pair do |category, service_score|
-        adjustment = @category_scores[category]["min"] * -1
-        score += service_score["total"] + adjustment
-        total += @category_scores[category]["max"] + adjustment
+        adjustment = @category_scores[category][:min] * -1
+        score += service_score[:score] + adjustment
+        total += @category_scores[category][:max] + adjustment
       end
 
       # Check whether the score has already been set recent

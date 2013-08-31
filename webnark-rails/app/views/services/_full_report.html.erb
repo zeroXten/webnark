@@ -1,12 +1,13 @@
 <% @categories.sort.map do |name, category| %>
-<% c = @service_scores[name]["total"] >= 0 ? "good-block" : "bad-block" %>
+<% c = @service_scores[name][:score] >= 0 ? "good-block" : "bad-block" %>
 <div class="block <%= c %>"><%= image_tag(category.icon_url) %> <%= name %></div>
 <p><%= category.description %></p>
+<p class="muted">Total score: <%= @service_scores[name][:score] %> | Minimum score: <%= @category_scores[name][:min] %> | Maximum score: <%= @category_scores[name][:max] %></p>
 
 <% @answers[name].each do |answer| %>
  <hr/>
  <% c = answer.report_choice.points >= 0 ? "text-success" : "text-error" %>
- <p class="<%= c %>"><%= answer.report_choice.name %> <span class="pull-right"><%= answer.report_choice.points %> points</span></p>
+ <p class="<%= c %>"><%= answer.report_choice.name %> <span class="pull-right"><%= answer.report_choice.points %> <%= "bonus " if answer.report_choice.bonus %>points</span></p>
  <p><%= answer.report_choice.description %></p>
  <blockquote><%= answer.notes %></blockquote>
 <% end %>

@@ -3,12 +3,12 @@
 
 <% @categories.sort.map do |name, category| %>
 <%
-  score = @service_scores[name]["good"] - @service_scores[name]["bad"]
+  score = @service_scores[name][:score]
   if score < 0
     good_width = 0
-    bad_width = -1 * 100 * score / @category_scores[name]["bad"]
+    bad_width = 100 * score / @category_scores[name][:min]
   else
-    good_width = 100 * score / @category_scores[name]["good"]
+    good_width = 100 * score / @category_scores[name][:max]
     bad_width = 0
   end
 %>

@@ -148,6 +148,7 @@ report_items = ReportItem.create([
 
 report_choices = {}
 points = [-20,-10,-5,0,5,10,20]
+bonuses = [false,false,false,false,true]
 
 report_items.each do |item|
   5.times do |i|
@@ -155,7 +156,7 @@ report_items.each do |item|
         report_item_id: item.id, 
         name: "Choice #{i} for item #{item.name}", 
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a",
-        bonus: false, 
+        bonus: bonuses.shuffle.pop,
         points: points.shuffle.pop
     )
     if not report_choices.has_key? item.name
