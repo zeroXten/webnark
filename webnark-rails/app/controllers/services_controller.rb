@@ -49,6 +49,7 @@ class ServicesController < ApplicationController
   # GET /services/new
   def new
     @service = Service.new
+    @report_categories = ReportCategory.all
   end
 
   # GET /services/1/edit
