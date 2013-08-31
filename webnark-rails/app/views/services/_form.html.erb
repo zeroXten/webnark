@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <% @report_categories.each do |category| %>
+  <% @report_categories.all(:order => :name).each do |category| %>
     <h3><%= category.name %></h3>
     <% category.report_items.each do |item| %>
       <h4><%= item.name %></h4>
