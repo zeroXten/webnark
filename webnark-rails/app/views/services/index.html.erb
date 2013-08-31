@@ -1,4 +1,6 @@
 <%- model_class = Service -%>
+<%= render 'shared/search' %>
+
 <% @services.each do |service| %>
   <% c = service.score >= 0.5 ? "good-block" : "bad-block" %>
   <div class="row">

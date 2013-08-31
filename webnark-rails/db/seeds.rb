@@ -2,37 +2,37 @@ report_categories = ReportCategory.create([
   {
     name: 'Authentication & Session Management', 
     description: 'Authentication is proving you are who you say you are and session management is the process of maintaining that trust once established. Most website and services require you to register your details and then log in to use the service, often using a username and password.',
-    icon_url: '/icons/Buzz-Private-icon.png' 
+    icon_url: 'icons/Buzz-Private-icon.png' 
   },
   {
     name: 'Data at Rest',
     description: 'Refers to inactive data which is stored physically in any digital form (e.g. harddisk, USB drive, CDs and DVDs etc.).',
-    icon_url: '/icons/It-Infrastructure-Hdd-icon.png'
+    icon_url: 'icons/It-Infrastructure-Hdd-icon.png'
   },
   {
     name: 'Data in Motion',
     description: 'Lorem ipsum dolor sit amet, consectvestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.',
-    icon_url: '/icons/It-Infrastructure-Remote-working-icon.png'
+    icon_url: 'icons/It-Infrastructure-Remote-working-icon.png'
   },
   {
     name: 'Privacy & EULA',
     description: 'sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.',
-    icon_url: '/icons/Buzz-Visible-icon.png'
+    icon_url: 'icons/Buzz-Visible-icon.png'
   },
   {
     name: 'Disclosure',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.',
-    icon_url: '/icons/Users-Talk-icon.png'
+    icon_url: 'icons/Users-Talk-icon.png'
   },
   {
     name: 'Advertising',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.',
-    icon_url: '/icons/Business-Money-bag-icon.png'
+    icon_url: 'icons/Business-Money-bag-icon.png'
   },
   {
     name: 'Incident History',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a, dapibus quam. Praesent magna ante, elementum eu aliquet vitae, dignissim et justo. Phasellus convallis ligula vel libero euismod vestibulum. Curabitur malesuada magna dapibus sapien faucibus, et rhoncus ligula sodales. Nam nibh massa, elementum vitae tincidunt placerat, semper et dolor. Donec blandit ut enim eu bibendum. Vestibulum id tincidunt velit.',
-    icon_url: '/icons/Office-Stuff-Planner-icon.png'
+    icon_url: 'icons/Office-Stuff-Planner-icon.png'
   },
 ])
 

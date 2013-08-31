@@ -1,8 +1,0 @@
-
-
-for each category
-  for each item
-    min score = min(scores not bonus) + total(scores bonus)
-    max score = max(scores not bonus) + total(scores bonus)
-
-

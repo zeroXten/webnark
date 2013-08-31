@@ -1,6 +1,6 @@
 <%- model_class = Service -%>
 <%
-  c = @service.score >= 0.5 ? "good-block" : "bad-block"
+  c = (10 * @service.score).round >= 6 ? "good-block" : "bad-block"
 %>
 <div class="text-center">
 <div class="block <%= c %> score"><%= (10 * @service.score).round %>/10</div>
