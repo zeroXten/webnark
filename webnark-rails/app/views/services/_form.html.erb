@@ -57,7 +57,7 @@
               <strong class="<%= c %>"><%= choice.name %></strong>
             </div>
             <div class="span2">
-              <strong class="<%= c %> pull-right"><%= choice.points %> points</strong>
+              <strong class="<%= c %> pull-right"><%= choice.points %><%= " bonus" if choice.bonus %> points</strong>
             </div>
           </div>
           <div class="row">
