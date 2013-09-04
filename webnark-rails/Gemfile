@@ -53,7 +53,12 @@ gem 'high_voltage'
 # Pretty ascii tables in rails console
 gem 'hirb'
 
+# Country codes
 gem 'countries'
 gem 'country_select'
 
+# Slugs
 gem 'friendly_id', '>= 5.0.0.beta4'
+
+# Screenshot job
+gem 'sidekiq'

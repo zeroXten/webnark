@@ -3,7 +3,9 @@
 # use privileged mode
 set -p
 
-# CHANGE THIS PATH
-PHANTOMJS_PATH=/home/jann/software/phantomjs-1.9.1-linux-x86_64/bin/phantomjs
+dir=$(dirname $0)
 
-$PHANTOMJS_PATH screenshot_helper.js "$1" | base64 -d | convert - -thumbnail 256x192 -
+# CHANGE THIS PATH
+PHANTOMJS_PATH=/usr/local/Cellar/phantomjs/1.9.1/bin/phantomjs
+
+$PHANTOMJS_PATH $dir/screenshot_helper.js "$1" | base64 -D | convert - -thumbnail 256x192 -

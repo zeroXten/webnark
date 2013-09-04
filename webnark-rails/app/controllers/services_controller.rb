@@ -2,6 +2,7 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
   before_action :calculate_score, only: [:show, :full]
   after_action :calculate_score, only: [:create, :update]
+  after_action :get_screenshot, only: [:create, :update]
 
   # GET /services
   # GET /services.json
@@ -101,6 +102,10 @@ class ServicesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_service
       @service = Service.friendly.find(params[:id])
+    end
+
+    def get_screenshot
+      ScreenshotWorker.perform_async(@service.url,@service.slug)
     end
 
     def calculate_score

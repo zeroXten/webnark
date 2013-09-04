@@ -5,7 +5,7 @@
 <div class="text-center">
 <div class="block <%= c %> score"><%= (10 * @service.score).round %>/10</div>
 <br/>
-<img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
+<img alt="screenshot" src="/screenshots/<%= @service.slug %>.png" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
 <br/>
 <p><%- if @service.country %>
 Hosted in <%= image_tag "flags/#{Country.find_country_by_name(@service.country).alpha2.downcase}.png" %> 
