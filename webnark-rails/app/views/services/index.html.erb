@@ -2,14 +2,14 @@
 <%= render 'shared/search' %>
 
 <% @services.each do |service| %>
-  <% c = service.score >= 0.5 ? "good-block" : "bad-block" %>
+  <% c = (10 * service.score).round >= 6 ? "good-block" : "bad-block" %>
   <div class="row">
     <div class="span2 text-center">
       <div class="block <%= c %>">
         <h2><%= (10 * service.score).round %>/10</h2>
       </div>
       <p><%- if service.country %>
-Hosted in <%= image_tag("flags/#{service.country.downcase}.png") %>
+Hosted in <%= image_tag("flags/#{Country.find_country_by_name(service.country).alpha2.downcase}.png") %>
 <% end %>
 <%- if service.hosting_provider %>
  by <%= service.hosting_provider %>

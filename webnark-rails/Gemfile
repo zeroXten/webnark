@@ -50,4 +50,10 @@ gem "twitter-bootstrap-rails"
 # Static pages
 gem 'high_voltage'
 
+# Pretty ascii tables in rails console
 gem 'hirb'
+
+gem 'countries'
+gem 'country_select'
+
+gem 'friendly_id', '>= 5.0.0.beta4'

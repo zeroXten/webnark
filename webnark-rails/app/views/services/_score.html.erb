@@ -8,7 +8,7 @@
 <img alt="screenshot" src="http://placehold.it/256x192" width="256" height="192"> <!-- 1024x768 scaled down to 25% -->
 <br/>
 <p><%- if @service.country %>
-Hosted in <%= image_tag "flags/#{@service.country.downcase}.png" %> 
+Hosted in <%= image_tag "flags/#{Country.find_country_by_name(@service.country).alpha2.downcase}.png" %> 
 <% end %>
 <%- if @service.hosting_provider %>
 by <%= @service.hosting_provider %>

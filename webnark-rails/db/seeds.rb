@@ -172,7 +172,7 @@ services = []
   service = Service.create(
     name: "Test service #{i}",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a",
-    country: "us",
+    country: "United Kingdom",
     hosting_provider: "Badger Inc",
     score: 0.0,
     score_updated_at: Time.at(0)
