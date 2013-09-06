@@ -2,25 +2,25 @@
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :name, :class => 'text_field span6' %>
+      <%= f.text_field :name, :class => 'text_field span5' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_area :description, :class => 'text_field span6', :rows => 3 %>
+      <%= f.text_area :description, :class => 'text_field span5', :rows => 3 %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :url, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :url, :class => 'text_field span6' %>
+      <%= f.text_field :url, :class => 'text_field span5' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :hosting_provider, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :hosting_provider, :class => 'text_field' %>
+      <%= f.text_field :hosting_provider, :class => 'text_field span5' %>
     </div>
   </div>
   <div class="control-group">
@@ -29,15 +29,9 @@
       <%= f.country_select :country %>
     </div>
   </div>
-  <div class="control-group">
-    <%= f.label :screenshot_url, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :screenshot_url, :class => 'text_field' %>
-    </div>
-  </div>
 
   <% @report_categories.all(:order => :name).each do |category| %>
-    <h3><%= category.name %></h3>
+    <div class="block neutral-block"><%= category.name %></div>
     <% category.report_items.each do |item| %>
       <h4><%= item.name %></h4>
       <% item.report_choices.all(:order => "bonus, points").each do |choice| %>

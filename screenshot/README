@@ -13,3 +13,52 @@ user or so) and grab the image from stdout.
 This script is designed around the idea that the permission level of the
 screenshot thing is exclusively lower than that of the webapp, so if the webapp
 can compromise the screenshot account, that's not an issue.
+
+Architecture and data flow
+--------------------------
+
+[ www ]			=== url + slug ===>		[ rails ]		# F1
+[ rails ]		=== url + slug ===>		[ sidekiq ]		# F2
+[ sidekiq ]		=== url ===>			[ bash script ]		# F3
+[ bash script ]		=== url ===>			[ phantom ]		# F4
+[ phantom ]		=== url ===>			[ www ]			# F5
+[ www ]			=== site ===>			[ phantom ]		# F6
+[ phantom ]		=== base64 image  ===>		[ base64 -D ]		# F7
+[ base64 -D ]   	=== image ===>			[ convert ]		# F8
+[ convert ]		=== image ===>			[ stdout ]		# F9
+[ stdout ]		=== image ===>			[ sidekiq ]		# F10
+[ sidekiq ]		=== image ===>			[ file system ]		# F11
+[ file system ]		=== image ===>			[ rails ]		# F12
+[ rails ]		=== image ===>			[ www ]			# F13
+
+Attacks
+-------
+
+A1	Bad input on F1
+
+A2A	Evil url in F1
+A2B	Bad site data in F6
+A2C	RCE in [ phantom ]
+
+A3A	Evil url in F1
+A3B	Bad site data in F6
+A3C	Bad image data in F7 and F8
+A3D	RCE in [ convert ]
+
+Controls
+--------
+
+C1	Basic input sanitization for A1
+
+C2A	Can't control url in A2A
+C2B	Can't control site data in A2B
+C2C	Limit privs of [ phantom ]	
+	 - phandom doesn't require file system write access
+	 - sidekiq simply takes stdout and writes to a file (no processing of image data)
+
+C3	Same as C2
+
+Assumptions
+-----------
+
+
