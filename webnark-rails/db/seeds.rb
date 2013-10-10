@@ -204,7 +204,7 @@ services = []
   )
 
   rand(20).times do |j|
-    service.comments.create(:title => "comment #{j}", :comment => "orem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem.")
+    service.comments.create(:title => "comment #{j}", :comment => "orem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem.", :user_id => user.id)
   end
 
   services << service

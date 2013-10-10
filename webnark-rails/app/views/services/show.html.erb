@@ -31,10 +31,12 @@
     <%= text_area_tag "comment[comment]" %><br/>
     <%= submit_tag "Add comment" %>
   <% end %>
+  <hr/>
   <% @comments.each do |comment| %>
-    <hr/>
-    <h3><%= comment.title %></h3>
-    <p><%= comment.comment %></p>
+    <blockquote><strong><%= comment.title %></strong><br/>
+      <%= comment.comment %><br/>
+      <span class="muted">By <%= comment.user.username %> at <%= comment.updated_at %></span>
+    </blockquote>
   <% end %>
   <%= paginate @comments %>
 </div>
