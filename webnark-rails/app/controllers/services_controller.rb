@@ -1,5 +1,12 @@
 class ServicesController < ApplicationController
+  # The order matters
+  #before_filter :authenticate_user!
   before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
+  load_and_authorize_resource
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, :alert => exception.message
+  end
+
   before_action :calculate_score, only: [:show, :full]
   after_action :calculate_score, only: [:create, :update]
   after_action :get_screenshot, only: [:create, :update]
@@ -7,11 +14,11 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
+    @services = Service.all.page(params[:page])
   end
 
   def search
-    @services = Service.where("name LIKE ? OR url LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    @services = Service.where("(name LIKE ? OR url LIKE ?) AND moderated = 't'", "%#{params[:query]}%", "%#{params[:query]}%").page(params[:page])
     render :index
   end
 
@@ -27,6 +34,7 @@ class ServicesController < ApplicationController
         @bad << answer.report_choice
       end
     end
+    @comments = @service.comments.recent.page(params[:page])
   end
 
   # GET /services/1/full
@@ -96,6 +104,12 @@ class ServicesController < ApplicationController
       format.html { redirect_to services_url }
       format.json { head :no_content }
     end
+  end
+
+  def add_comment
+    service = Service.friendly.find(params[:id])
+    service.comments.create(comment_params)
+    redirect_to :action => :show, :id => service
   end
 
   private
@@ -212,7 +226,14 @@ class ServicesController < ApplicationController
         :hosting_provider, 
         :country, 
         :screenshot_url,
-        :answers_attributes => [:id, :service_id, :notes, :report_choice_id, :selected, '_destroy']
+        :answers_attributes => [:id, :service_id, :notes, :report_choice_id, :selected, '_destroy'],
+      )
+    end
+
+    def comment_params
+      params.require(:comment).permit(
+        :title,
+        :comment
       )
     end
 end

@@ -7,8 +7,17 @@
 </tr>
 <% @categories.sort.map do |name, category| %>
   <%
-    bad_width = 100 * @service_scores[name][:bad] / @category_scores[name][:min]
-    good_width = 100 * @service_scores[name][:good] / @category_scores[name][:max]
+    if @category_scores[name][:min] == 0
+      bad_width = 0
+    else
+      bad_width = 100 * @service_scores[name][:bad] / @category_scores[name][:min]
+    end
+
+    if @category_scores[name][:max] == 0
+      good_width = 0
+    else
+      good_width = 100 * @service_scores[name][:good] / @category_scores[name][:max]
+    end
   %>
 
   <tr>

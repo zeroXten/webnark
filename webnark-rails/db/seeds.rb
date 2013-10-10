@@ -1,3 +1,26 @@
+user = User.create(
+  username: "user",
+  email: "user@example.com",
+  password: "changeme",
+  password_confirmation: "changeme"
+)
+
+mod = User.create(
+  username: "mod",
+  email: "mod@example.com",
+  password: "changeme",
+  password_confirmation: "changeme",
+  moderator: true
+)
+
+admin = User.create(
+  username: "admin",
+  email: "admin@example.com",
+  password: "changeme",
+  password_confirmation: "changeme",
+  admin: true
+)
+
 report_categories = ReportCategory.create([
   {
     name: 'Authentication', 
@@ -168,15 +191,22 @@ report_items.each do |item|
 end
 
 services = []
-10.times do |i|
+20.times do |i|
   service = Service.create(
     name: "Test service #{i}",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a",
     country: "United Kingdom",
     hosting_provider: "Badger Inc",
     score: 0.0,
-    score_updated_at: Time.at(0)
+    score_updated_at: Time.at(0),
+    user_id: user.id,
+    moderated: [true,true,false].shuffle.pop
   )
+
+  rand(20).times do |j|
+    service.comments.create(:title => "comment #{j}", :comment => "orem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem.")
+  end
+
   services << service
 end
 

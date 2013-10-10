@@ -1,4 +1,5 @@
 WebnarkRails::Application.routes.draw do
+  devise_for :users
   resources :answers
 
   resources :report_choices
@@ -15,6 +16,8 @@ WebnarkRails::Application.routes.draw do
   get '/search', to: 'services#search'
 
   get '/services/:id/full', to: 'services#full', as: :full_report
+  post "/services/add_comment" => "services#add_comment", :as => "add_comment_to_services", :via => [:services]
+
 
   get '/community', to: 'community#index', as: :community
 

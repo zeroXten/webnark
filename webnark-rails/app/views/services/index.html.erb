@@ -24,6 +24,8 @@ Hosted in <%= image_tag("flags/#{Country.find_country_by_name(service.country).a
     <hr/>
 <% end %>
 
+<%= paginate @services %>
+
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_service_path,
             :class => 'btn btn-primary' %>

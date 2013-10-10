@@ -24,6 +24,19 @@
                 :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                 :class => 'btn btn-danger' %>
   </div>
+  <h2>Comments</h2>
+  <%= form_tag "/services/add_comment" do %>
+    <%= hidden_field_tag "id", @service.id %>
+    <%= text_field_tag "comment[title]" %><br/>
+    <%= text_area_tag "comment[comment]" %><br/>
+    <%= submit_tag "Add comment" %>
+  <% end %>
+  <% @comments.each do |comment| %>
+    <hr/>
+    <h3><%= comment.title %></h3>
+    <p><%= comment.comment %></p>
+  <% end %>
+  <%= paginate @comments %>
 </div>
 <div class="span3">
   <%= render 'score' %>

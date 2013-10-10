@@ -33,6 +33,8 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+    <%= javascript_include_tag "application" %>
   </head>
   <body>
 
@@ -40,6 +42,40 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/">Webnark</a>
+ <!-- Start of the nav bar content -->
+      <div class="nav-collapse"><!-- Other nav bar content -->
+        <!-- The drop down menu -->
+        <ul class="nav pull-right">
+          <% if user_signed_in? %>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.username %> <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px;">
+              <%= link_to('Account', edit_user_registration_path(current_user)) %>
+              <hr/>
+              <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %>
+            </div>
+          </li>
+          <% else %>
+          <li><a href="/users/sign_up">Sign Up</a></li>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px;">
+              <%= form_for("user", :url => user_session_path) do |f| %>
+                <%= f.text_field :email, :placeholder => "username" %>
+                <%= f.password_field :password, :placeholder => "password" %>
+                <%= f.check_box :remember_me, :class => "pull-left", :style => "margin-right: 10px;" %>
+                <%= f.label :remember_me, :class => "string optional" %>
+                <%= f.submit 'Sign in', :class => "btn btn-primary"%>
+                <br/><br/>
+                <%= link_to "Forgot your password?", new_password_path('user') %>
+              <% end %>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
         </div>
       </div>
     </div>
@@ -59,10 +95,6 @@
 
     </div> <!-- /container -->
 
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "application" %>
 
   </body>
 </html>

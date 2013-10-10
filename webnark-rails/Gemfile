@@ -62,3 +62,16 @@ gem 'friendly_id', '>= 5.0.0.beta4'
 
 # Screenshot job
 gem 'sidekiq'
+
+# Authentication
+gem 'devise'
+gem 'devise_invitable', :github => 'scambra/devise_invitable', :branch => "devise-3.1"
+
+# Authorization
+gem 'cancan'
+
+# Pages
+gem 'kaminari'
+
+# Comments
+gem 'acts_as_commentable'
