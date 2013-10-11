@@ -52,9 +52,13 @@ class Ability
 
   def user_perms(user)
     guest_perms
+
     can :manage, Service, :moderated => false, :user_id => user.id 
     can :add_comment, Service
+    can :report, Service
     cannot :destroy, Service
+
+    can :report, Comment
   end
 
   def guest_perms

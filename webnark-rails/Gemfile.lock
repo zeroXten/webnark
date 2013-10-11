@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/medihack/make_flaggable.git
+  revision: 4cec5f8e1366500b2ab8e73739e47cbb79c4bd65
+  specs:
+    make_flaggable (0.0.3)
+      activerecord (>= 3.0, <= 4.0)
+
+GIT
   remote: git://github.com/scambra/devise_invitable.git
   revision: 06e1df1ddc2bfc97c0d34337d17ae4c1342a6a6b
   branch: devise-3.1
@@ -184,6 +191,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
+  make_flaggable!
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

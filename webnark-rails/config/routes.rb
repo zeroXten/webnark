@@ -17,6 +17,9 @@ WebnarkRails::Application.routes.draw do
 
   get '/services/:id/full', to: 'services#full', as: :full_report
   post "/services/add_comment" => "services#add_comment", :as => "add_comment_to_services", :via => [:services]
+  get '/services/:id/report', to: 'services#report', as: :report_service
+
+  get '/comments/:id/report', to: 'comments#report', as: :report_comment
 
 
   get '/community', to: 'community#index', as: :community

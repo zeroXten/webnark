@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131010213139) do
+ActiveRecord::Schema.define(version: 20131011230841) do
 
   create_table "answers", force: true do |t|
     t.integer  "service_id"
@@ -31,11 +31,25 @@ ActiveRecord::Schema.define(version: 20131010213139) do
     t.string   "role",                        default: "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "flagged"
   end
 
   add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id"
   add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "flaggings", force: true do |t|
+    t.string   "flaggable_type"
+    t.integer  "flaggable_id"
+    t.string   "flagger_type"
+    t.integer  "flagger_id"
+    t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "flaggings", ["flaggable_type", "flaggable_id"], name: "index_flaggings_on_flaggable_type_and_flaggable_id"
+  add_index "flaggings", ["flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], name: "access_flaggings"
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -91,6 +105,7 @@ ActiveRecord::Schema.define(version: 20131010213139) do
     t.datetime "score_updated_at"
     t.boolean  "moderated",        default: false
     t.integer  "user_id"
+    t.boolean  "flagged"
   end
 
   add_index "services", ["slug"], name: "index_services_on_slug", unique: true

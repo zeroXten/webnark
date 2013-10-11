@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
   # The order matters
   #before_filter :authenticate_user!
-  before_action :set_service, only: [:show, :full, :edit, :update, :destroy]
+  before_action :set_service, only: [:show, :full, :edit, :update, :destroy, :report]
   load_and_authorize_resource
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
@@ -52,6 +52,7 @@ class ServicesController < ApplicationController
       @answers[category.name] << answer
     end
 
+    @comments = @service.comments.recent.page(params[:page])
     render :show
   end
 
@@ -110,6 +111,16 @@ class ServicesController < ApplicationController
     service = Service.friendly.find(params[:id])
     service.comments.create(comment_params)
     redirect_to :action => :show, :id => service
+  end
+
+  def report
+    if user_signed_in?
+      current_user.flag(@service, :abuse)
+      @service.update_attributes(:flagged => true)
+      redirect_to :back, notice: "Service has been reported"
+    else
+      redirect_to :back, alert: "You must be logged in to report services"
+    end
   end
 
   private

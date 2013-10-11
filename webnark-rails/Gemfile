@@ -75,3 +75,6 @@ gem 'kaminari'
 
 # Comments
 gem 'acts_as_commentable'
+
+# Flagging
+gem 'make_flaggable', :github => 'medihack/make_flaggable'
