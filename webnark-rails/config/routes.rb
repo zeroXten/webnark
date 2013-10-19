@@ -1,14 +1,11 @@
 WebnarkRails::Application.routes.draw do
+
   devise_for :users
+
   resources :answers
-
   resources :report_choices
-
   resources :report_items
-
   resources :report_categories
-
-  resources :services
 
   root :to => 'high_voltage/pages#show', id: 'home'
 
@@ -17,12 +14,19 @@ WebnarkRails::Application.routes.draw do
 
   get '/services/:id/full', to: 'services#full', as: :full_report
   post "/services/add_comment" => "services#add_comment", :as => "add_comment_to_services", :via => [:services]
+  get '/services/unmoderated', to: 'services#unmoderated', as: :unmoderated_services
+  get '/services/flagged', to: 'services#flagged', as: :flagged_services
   get '/services/:id/report', to: 'services#report', as: :report_service
+  get '/services/:id/moderate', to: 'services#moderate', as: :moderate_service
+  get '/services/:id/unreport', to: 'services#unreport', as: :unreport_service
+  get '/services/tagged' => 'services#tagged', :as => 'tagged'
+  resources :services
 
   get '/comments/:id/report', to: 'comments#report', as: :report_comment
+  get '/comments/flagged', to: 'comments#flagged', as: :flagged_comments
+  resources :comments
 
-
-  get '/community', to: 'community#index', as: :community
+  get '/pages/about', to: 'high_voltage/pages#show', id: 'about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

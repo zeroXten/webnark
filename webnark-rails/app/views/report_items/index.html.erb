@@ -8,7 +8,6 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:report_category_id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:help) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -20,7 +19,6 @@
         <td><%= link_to report_item.id, report_item_path(report_item) %></td>
         <td><%= report_item.report_category_id %></td>
         <td><%= report_item.name %></td>
-        <td><%= report_item.description %></td>
         <td><%= report_item.help %></td>
         <td><%=l report_item.created_at %></td>
         <td>

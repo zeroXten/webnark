@@ -2,7 +2,23 @@
 <%= render 'shared/search' %>
 
 <h1>Security report for <%= link_to @service.name, @service.url %></h1>
-<p class="muted">Last updated <%= @service.updated_at %> by zeroXten | <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_service_path(@service) %> <%= link_to t('.destroy', :default => t("helpers.links.destroy")), service_path(@service), :method => 'delete', :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } %>
+<p class="muted">Last updated <%= @service.updated_at %>, added by zeroXten
+<% if can? :manage, @service %>
+<% if not @service.moderated? %>
+  | <%= link_to 'Moderate', moderate_service_path(@service) %> 
+<% end %>
+<% if @service.flagged %>
+  | <%= link_to 'Unreport', unreport_service_path(@service) %>
+<% end %>
+  | <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_service_path(@service) %> 
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")), service_path(@service), :method => 'delete', :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } %> 
+<% end %>
+<% if @service.tags.any? %>
+<p>
+  Tags: 
+  <% @service.tags.each do |tag| %><%= link_to tag.name, tagged_url(:tag => tag.name) %> <% end %>
+</p>
+<% end %>
 
 <div class="row">
 <div class="span9">
@@ -13,25 +29,19 @@
     <%= render 'summary_report' %>
   <% end %>
 
+  <hr/>
   <h2>Comments</h2>
-  <%= form_tag "/services/add_comment" do %>
-    <%= hidden_field_tag "id", @service.id %>
-    <%= text_field_tag "comment[title]" %><br/>
-    <%= text_area_tag "comment[comment]" %><br/>
+  <%= render 'comments/list' %>
+  <%= form_tag "/services/add_comment", :class => "form-horizontal" do %>
+    <%= hidden_field_tag "id", @service.id  %>
+    <%= text_field_tag "comment[title]", nil, :class => "span5", :placeholder => "title" %><br/><br/>
+    <%= text_area_tag "comment[comment]", nil, :class => "text-area span5", :rows => 5, :placeholder => "comment"  %><br/><br/>
     <%= submit_tag "Add comment" %>
   <% end %>
-  <hr/>
-  <% @comments.each do |comment| %>
-    <blockquote><strong><%= comment.title %></strong><br/>
-      <%= comment.comment %><br/>
-      <span class="muted">By <%= comment.user.username %> at <%= comment.updated_at %></span> - <%= link_to "report", :controller => 'comments', :action => 'report', :id => comment.id, :data => { :confirm => 'Report this comment?' } %>
-    </blockquote>
-  <% end %>
-  <%= paginate @comments %>
 </div>
 <div class="span3">
   <%= render 'score' %>
-  <%= link_to "report this service", :report_service, :data => { :confirm => 'Report this service?' } %>
+  <p class="text-center"><%= link_to "report this service", :report_service, :data => { :confirm => 'Report this service?' } %></p>
   <%= render 'shared/community_link'  %>
 </div>
 </div>

@@ -1,3 +1,7 @@
 <div class="text-center">
-  <%= link_to "Get involved", community_url(), :class => "btn btn-primary btn-large" %>
+  <% if user_signed_in? %>
+    <%= link_to "Add a service", new_service_path, :class => "btn btn-primary btn-large" %>
+  <% else %>
+    <%= link_to "Learn more", page_path('about'), :class => "btn btn-primary btn-large" %>
+  <% end %>
 </div>

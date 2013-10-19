@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "WebnarkRails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "thunr.com" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -41,23 +41,51 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">Webnark</a>
+          <a class="brand" href="/"><%= image_tag("thunr-logo.png") %></a>
+          <!-- <a class="brand" href="/">Thunr.com</a> -->
  <!-- Start of the nav bar content -->
       <div class="nav-collapse"><!-- Other nav bar content -->
         <!-- The drop down menu -->
-        <ul class="nav pull-right">
+        <ul class="nav pull-right"
+          <li class="divider-vertical"></li>
+          <li><%= link_to "About", page_path('about') %></li>
           <% if user_signed_in? %>
+          <% if current_user.moderator? or current_user.admin? %>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Moderator <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li role="presentation"><%= link_to 'Add a new service', new_service_path %></li>
+              <li role="presentation"><%= link_to "Unmoderated services", unmoderated_services_path %></li>
+              <li role="presentation"><%= link_to "Flagged services", flagged_services_path%></li>
+              <li role="presentation"><%= link_to "Flagged comments", flagged_comments_path %></li>
+            </ul>
+          </li>
+          <% end %>
+          <% if current_user.admin? %>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li role="presentation"><%= link_to 'Report Categories', report_categories_path() %></li>
+              <li role="presentation"><%= link_to 'Report Items', report_items_path() %></li>
+              <li role="presentation"><%= link_to 'Report Choices', report_choices_path() %></li>
+              <li role="presentation"><%= link_to 'Answers', answers_path() %></li>
+            </ul>
+          </li>
+          <% end %>
           <li class="divider-vertical"></li>
           <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.username %> <strong class="caret"></strong></a>
-            <div class="dropdown-menu" style="padding: 15px;">
-              <%= link_to('Account', edit_user_registration_path(current_user)) %>
-              <hr/>
-              <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %>
-            </div>
+            <ul class="dropdown-menu" style="padding: 15px;">
+              <li role="presentation"><%= link_to('Account', edit_user_registration_path(current_user)) %></li>
+              <li><hr/></li>
+              <li role="presentation"><%= link_to('Sign out', destroy_user_session_path, :method => :delete) %></li>
+            </ul>
           </li>
           <% else %>
-          <li><a href="/users/sign_up">Sign Up</a></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li class="divider-vertical"></li>
           <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
@@ -88,8 +116,8 @@
 
         <hr/>
         <div class="footer text-center">
-         <p><a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
-         <p><a class="muted" href="http://rubyonrails.org/">Made pretty by Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
+         <p><a href="#">Privacy</a> | <a href="#">Contact</a> |<a href="#"> Further Information</a> | <a href="#">References</a> | <a href="#">Creative Commons blah</a></p>
+         <p><a class="muted" href="http://getbootstrap.com/2.3.2/">Made pretty using Bootstrapp</a> | <a class="muted" href="http://rubyonrails.org/">Powered by Ruby on Rails</a> | <a class="muted" href="http://iconpharm.com/">Icons by IconPharm</a></p>
         </div>
 
 

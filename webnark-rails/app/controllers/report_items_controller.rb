@@ -1,4 +1,12 @@
 class ReportItemsController < ApplicationController
+  load_and_authorize_resource
+  rescue_from CanCan::AccessDenied do |exception|
+    begin
+      redirect_to :back, :alert => exception.message
+    rescue ActionController::RedirectBackError
+      redirect_to root_path
+    end
+  end
   before_action :set_report_item, only: [:show, :edit, :update, :destroy]
 
   # GET /report_items

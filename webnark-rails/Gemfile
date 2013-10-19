@@ -78,3 +78,12 @@ gem 'acts_as_commentable'
 
 # Flagging
 gem 'make_flaggable', :github => 'medihack/make_flaggable'
+
+# Monitoring
+gem 'newrelic_rpm'
+
+# Tags
+gem 'acts-as-taggable-on'
+
+# OpenID
+gem "devise_openid_authenticatable"

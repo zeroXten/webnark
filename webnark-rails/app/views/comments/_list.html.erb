@@ -1,0 +1,16 @@
+<% @comments.each do |comment| %>
+  <blockquote><strong><%= comment.title %></strong><br/>
+    <%= comment.comment %><br/>
+    <span class="muted">By <%= comment.user.username %> at <%= comment.updated_at %> 
+    <% if can? :report, comment %>
+     - <%= link_to "report abuse", :controller => 'comments', :action => 'report', :id => comment.id, :data => { :confirm => 'Report this comment?' } %>
+    <% end %>
+    <% if can? :destroy, comment %>
+      | <%= link_to "delete", comment_path(comment), :method => 'delete', :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } %>
+    <% end %>
+    </span>
+  </blockquote>
+<% end %>
+<div class="row text-center">
+<%= paginate @comments %>
+</div>

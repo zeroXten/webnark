@@ -1,0 +1,19 @@
+* migrate from webnark to thunr
+* branding
+* git ignore relic config
+* add moderated scope to services
+* gherking for AAA
+* heading
+* about page
+  - mission
+  - audience
+  - what is thunr?
+  - road map
+* read only access to report entities
+* latest 5 services on home page
+* additional pages e.g. privacy, further information etc.
+
+=== done ==
+
+* admin auth
+* delete comments

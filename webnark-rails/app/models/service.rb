@@ -11,4 +11,5 @@ class Service < ActiveRecord::Base
   paginates_per 5
   acts_as_commentable
   make_flaggable
+  acts_as_taggable
 end

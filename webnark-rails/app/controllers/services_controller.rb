@@ -1,10 +1,19 @@
 class ServicesController < ApplicationController
+
+  def redirect_back(dest, good_opts = nil, bad_opts = nil)
+    begin
+      redirect_to :back, good_opts
+    rescue ActionController::RedirectBackError
+      redirect_to dest, bad_opts
+    end
+  end
+
   # The order matters
   #before_filter :authenticate_user!
-  before_action :set_service, only: [:show, :full, :edit, :update, :destroy, :report]
+  before_action :set_service, only: [ :show, :full, :edit, :update, :destroy, :report, :unreport, :moderate ]
   load_and_authorize_resource
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, :alert => exception.message
+    redirect_back root_path, {}, { :alert => exception.message }
   end
 
   before_action :calculate_score, only: [:show, :full]
@@ -18,7 +27,9 @@ class ServicesController < ApplicationController
   end
 
   def search
-    @services = Service.where("(name LIKE ? OR url LIKE ?) AND moderated = 't'", "%#{params[:query]}%", "%#{params[:query]}%").page(params[:page])
+    services_name = Service.where("(name LIKE ? OR url LIKE ?) AND moderated = 't'", "%#{params[:query]}%", "%#{params[:query]}%")
+    services_tags = Service.where(:moderated => true).tagged_with(params[:query])
+    @services = Kaminari.paginate_array(services_name + services_tags).page(params[:page])
     render :index
   end
 
@@ -121,6 +132,43 @@ class ServicesController < ApplicationController
     else
       redirect_to :back, alert: "You must be logged in to report services"
     end
+  end
+
+  def unreport
+    if user_signed_in?
+      current_user.unflag(@service)
+      @service.update_attributes(:flagged => false)
+      redirect_to :back, notice: "Service has been ureported"
+    else
+      redirect_to :back, alert: "Oops"
+    end
+  end
+
+  def moderate
+    if @service.update_attributes(:moderated => true)
+      redirect_to @service, notice: 'Service has been moderated.'
+    else
+      redirect_to @service, alert: 'Unable to moderate service.'
+    end
+  end
+
+  def unmoderated
+    @services = Service.where(:moderated => false).page(params[:page])
+    render :index
+  end
+
+  def flagged
+    @services = Service.where(:flagged => true).page(params[:page])
+    render :index
+  end
+
+  def tagged
+    if params[:tag].present?
+      @services = Service.where(:moderated => true).tagged_with(params[:tag]).page(params[:page])
+    else
+      @services = Service.where(:moderated => true).all.page(params[:page])
+    end
+    render :index
   end
 
   private
@@ -229,9 +277,18 @@ class ServicesController < ApplicationController
           end
         end
       end
+
+      # Fix moderated params
+      if user_signed_in and current_user.moderator?
+        params[:service][:moderated] = true
+      else
+        params[:service][:moderated] = false
+      end
+
       params.require(:service).permit(
         :name, 
         :description, 
+        :tag_list,
         :url, 
         :slug, 
         :hosting_provider, 
@@ -242,8 +299,15 @@ class ServicesController < ApplicationController
     end
 
     def comment_params
+      if user_signed_in?
+        params[:comment][:user_id] = current_user.id
+      else
+        # TODO - not sure what to do here yet
+        return nil
+      end
       params.require(:comment).permit(
         :title,
+        :user_id,
         :comment
       )
     end
