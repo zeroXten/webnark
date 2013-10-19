@@ -84,6 +84,3 @@ gem 'newrelic_rpm'
 
 # Tags
 gem 'acts-as-taggable-on'
-
-# OpenID
-gem "devise_openid_authenticatable"
